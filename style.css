@@ -1,0 +1,833 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+@font-face {
+    font-family: 'Estedad';
+    src: url("fonts/Estedad.ttf");
+}
+:root {
+    /*--maincolor: #DA2F37;*/
+    /*--maincolor: rgba(218, 47, 55, 1);*/
+    --maincolor: rgba(218, 47, 256, 1);
+    --SecondMaincolor: #000;
+    --MainBorder: 1px solid #ffffff1a;
+    --LightParagraphs: #fff;
+    --LightShapes: #f5f5f5;
+    --LightSections: #fff;
+    --TenPercentWhite: #ffffff1a;
+    --TenPercentBlack: #0000001a;
+    --SixtyPercentWhite: rgb(256 , 256 , 256 , 0.6);
+    --DarkParagraphs: #000;
+    --SiteBackgroundColor: #ebebeb;
+}
+body {
+    direction: rtl;
+    font-family: 'Estedad';
+    background: var(--SiteBackgroundColor);
+}
+a{
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+/* container: */
+.container {
+    width: 1200px;
+    margin: auto;
+}
+/* FLEX: */
+.flex{
+    display: flex;
+}
+.space-btw{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+/* SVGs: */
+.irancast-header > svg{
+    fill: var(--SecondMaincolor);
+}
+
+.season-category .episodes svg>path:nth-child(2),
+.season-category .seasons svg>path:nth-child(2)
+{
+    fill: var(--LightShapes);
+}
+
+.irancast-banner>.shape-parent>svg
+{
+    fill: var(--maincolor);
+}
+svg {
+    /*fill: var(--maincolor);*/
+    /*fill: red;*/
+}
+/* Horizental Line: */
+.h-line{
+    height: 1px;
+    width: 100%;
+    background-color: var(--TenPercentBlack);
+}
+/* indedex header: */
+.irancast-header{
+    position: relative;
+}
+.irancast-header .header-content-top {
+    width: 100%;
+    height: 40%;
+    padding-top: 20px;
+}
+.irancast-header .header-content-both{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.irancast-header .header-content-top .logo-text{
+    gap: 16px;
+    flex-grow: 1;
+}
+.irancast-header .header-content-top .logo-text p {
+    color: var(--LightParagraphs);
+    opacity: 0.7;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* سه نقطه آخر متن */
+}
+.irancast-header .header-between-sections-svg {
+    width: 100%;
+}
+.irancast-header .header-content-top .left-top-header{
+    gap: 16px;
+    align-items: stretch
+}
+.irancast-header .header-content-top .left-top-header button i {
+    font-size: 16px;
+}
+.irancast-header .header-content-top .header-search-button{
+    box-shadow: 2px 2px 9px -1px var(--maincolor);
+}
+.irancast-header .header-content-top .header-search-button i {
+    font-size: 22px !important;
+}
+.irancast-header .header-content-top .header-search-section {
+    display: flex;
+    padding-bottom: 10px;
+    gap: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.irancast-header .header-content-top .header-search-section:hover {
+    border-bottom: 1px solid rgb(256,256,256,0.5);
+}
+.irancast-header .header-content-top .header-search-section input[type="text"] {
+    background: var(--SecondMaincolor);
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+     width: 0px;
+    color: var(--LightParagraphs);
+}
+.irancast-header .header-content-top .header-search-section:hover input[type="text"] {
+    width: unset;
+    /*display: block;*/
+}
+.irancast-header .header-content-top .header-search-section input[type="text"]:focus {
+    background-color: var(--TenPercentWhite);
+    border: none;
+    outline: none;
+    width: unset;
+}
+.irancast-header .header-content-top button {
+    font-family: Estedad;
+    padding: 8px 12px;
+    font-weight: bold;
+    background-color: var(--maincolor);
+    border-radius: 10px;
+    color: var(--LightParagraphs);
+    border: var(--MainBorder);
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.irancast-header .left-top-header button:nth-child(odd) {
+    /* استایل دکمه‌های فرد هدر */
+}
+.irancast-header .left-top-header .user-account-button{
+    background-color: var(--TenPercentWhite);
+    gap: 16px;
+}
+.irancast-header .left-top-header .user-account-div{
+    position: relative;
+}
+.irancast-header .left-top-header .user-account-detail-header {
+    position: absolute;
+    top: 140%;
+    padding: 12px;
+    border-radius: 10px;
+    width: 215px;
+    background-color: var(--LightParagraphs);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 5;
+
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+.irancast-header .left-top-header .user-account-detail-header .user-img{
+    position: relative;
+}
+.irancast-header .left-top-header .user-account-detail-header .user-img::after {
+    content: "";
+    position: absolute;
+    z-index: 40;
+    width: 25px;
+    height: 17px;
+    top: 32%;
+    right: 15px;
+    box-shadow: -3px 1px 34px 12px black;
+    z-index: -1;
+}
+.user-account-div:hover .user-account-detail-header {
+    visibility: visible;
+    opacity: 1;
+    top: 120%;
+}
+
+.irancast-header .left-top-header .user-account-detail-header::after {
+    content: "";
+    position: absolute;
+    width: 215px;
+    height: 22px;
+    top: -20px;
+    right: 0;
+}
+.irancast-header .left-top-header .user-account-button .header-user-detail{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff1a;
+    top: 100%;
+}
+.irancast-header .left-top-header .user-account-detail-header .user-detail{
+    display: flex;
+    gap: 12px;
+}
+.irancast-header .left-top-header .user-account-detail-header .user-detail h3{
+    font-size: 14px;
+}
+.irancast-header .left-top-header .user-account-detail-header .user-detail span {
+    font-size: 12px;
+    line-height: 32px;
+    opacity: 0.7;
+}
+.irancast-header .left-top-header .user-account-detail-header .user-detail img{
+    max-width: 56px;
+    max-height: 56px;
+}
+.left-top-header .user-account-detail-header .woo-section{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.left-top-header .user-account-detail-header .woo-section a,
+.left-top-header .user-account-detail-header .exit a{
+    font-size: 14px;
+    color: var(--DarkParagraphs);
+    opacity: 0.7;
+}
+.left-top-header .user-account-detail-header .exit a{
+    display: block;
+    opacity: 0.3;
+}
+.left-top-header .user-account-detail-header .woo-section a:hover{
+    opacity: 1;
+}
+.left-top-header .user-account-detail-header .exit a:hover,
+.left-top-header .user-account-detail-header .exit a:hover i{
+    color: #f02020;
+    opacity: 1;
+}
+.left-top-header .user-account-detail-header .woo-section a:hover i
+{
+    color: var(--maincolor);
+    opacity: 1;
+}
+.left-top-header .user-account-detail-header .woo-section a i,
+.left-top-header .user-account-detail-header .exit a i {
+    padding-left: 7px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0.7;
+}
+/* bottom header section: */
+
+.irancast-header .header-content-bottom{
+    width: 100%;
+    height: 45%;
+}
+.irancast-header .header-content-bottom .container {
+    height: 100%;
+    padding-bottom: 20px;
+}
+.irancast-header .header-content-bottom .container>ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+.irancast-header .header-content-bottom .container>ul>li {
+    position: relative;
+}
+.irancast-header .header-content-bottom .container>ul>li a {
+    color: var(--LightParagraphs);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    opacity: 0.5;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+.irancast-header .header-content-bottom .container>ul>li>a>i{
+    transition: all 0.2s ease-in-out;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ffffff00;
+}
+.irancast-header .header-content-bottom .container>ul>li:hover>a{
+    opacity: 1;
+}
+.irancast-header .header-content-bottom .container>ul>li:hover i {
+    background: var(--maincolor);
+    padding: 12px;
+    border: var(--MainBorder);
+}
+.irancast-header .header-content-bottom .container>ul>li>ul {
+    position: absolute;
+    right: 0;
+     max-width: 1037px;
+    list-style: none;
+    top: 160%;
+    border-radius: 24px;
+    display: flex;
+    background-color: var(--LightShapes);
+    border: 4px solid #ffffffa1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    z-index: 50;
+}
+.irancast-header .header-content-bottom .container>ul>li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+    top: 140%;
+}
+.irancast-header .header-content-bottom .container>ul>li>ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    width: 100%;
+    right: 0;
+    top: -20px;
+}
+.irancast-header .header-content-bottom .container>ul>li>ul>li {
+    width: 201px;
+    border-left: 1px solid var(--TenPercentBlack);
+    padding: 24px;
+}
+.irancast-header .header-content-bottom .container>ul>li>ul>li:last-child {
+    border-left: none;
+}
+.irancast-header .header-content-bottom .container>ul>li>ul>li>a{
+    color: #000;
+}
+.irancast-header .header-content-bottom .container>ul>li>ul>li>h2 {
+    font-size: 16px;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+.irancast-header .header-content-bottom .container>ul>li>ul>li>h2::before {
+    content: "";
+    background-color: var(--maincolor);
+    height: 16px;
+    width: 8px;
+    box-shadow: 2px 2px 9px -1px var(--maincolor);
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0 0 0 8px;
+}
+.irancast-header .header-content-bottom .container>ul>li>ul>li>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 20px;
+}
+.irancast-header .header-content-bottom .container>ul>li>ul>li>div>ul {
+    margin-top: 9px;
+}
+.irancast-header .header-content-bottom .container>ul>li>ul>li>ul>li{
+
+}
+.irancast-header .header-content-bottom .container>ul>li>ul>li>div>ul>li>a{
+    padding: 3px;
+    color: var(--SecondMaincolor);
+}
+.irancast-header .header-content-bottom .container>ul>li>ul>li>div>ul>li>a:hover{
+    opacity: 1;
+    color: var(--maincolor);
+}
+.irancast-header .header-content-bottom .container>ul>li>ul>li>div>a{
+    color: var(--maincolor);
+    opacity: 1;
+}
+ul{
+    list-style: none;
+}
+.irancast-header .header-content-bottom .bottom-left-header {
+    gap: 10px;
+}
+.irancast-header .header-content-bottom .bottom-left-header p{
+    color: var(--SixtyPercentWhite);
+}
+.irancast-header .header-content-bottom .bottom-left-header span {
+    color: #fff;
+}
+.irancast-header .header-content-bottom .bottom-left-header i {
+    color: var(--maincolor);
+    padding: 11px;
+    border-radius: 10px;
+    background: #ffffff1a;
+    border: var(--MainBorder);
+}
+/* start banner: */
+.irancast-banner{
+    margin-top: 60px;
+}
+.irancast-banner .shape-parent {
+    position: relative;
+    width: 100%;
+}
+.irancast-banner .banner-content {
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0px 50px;
+}
+.irancast-banner .banner-content .right-section-banner{
+    width: 50%;
+    position: relative;
+}
+.irancast-banner .banner-content .left-section-banner{
+}
+.irancast-banner .banner-content .right-section-banner::after {
+    position: absolute;
+    content: "";
+    padding: 181px;
+    border-radius: 100%;
+    top: 50%;
+    background-color: #fff;
+    right: 45%;
+    transform: translate(50%, -50%);
+}
+.irancast-banner .right-section-banner img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    bottom: 10px;
+    z-index: 1;
+}
+.irancast-banner .shape-parent .sub-shape {
+    position: absolute;
+    bottom: 9px;
+    left: 0px;
+    z-index: 1;
+    width: 20.6%;
+}
+.irancast-banner .banner-content .left-section-banner {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 54px 0 44px 50px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.irancast-banner .banner-content .left-section-banner .podcast-title {
+    padding: 4px;
+    border: var(--MainBorder);
+    background-color: var(--TenPercentWhite);
+    border-radius: 12px;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+}
+.irancast-banner .banner-content .left-section-banner .podcast-title img{
+    display: inline-block;
+}
+.irancast-banner .banner-content .left-section-banner .podcast-title span {
+    padding: 0 8px 0 6px;
+    color: var(--LightParagraphs);
+}
+.irancast-banner .banner-content .left-section-banner h1{
+    color: var(--LightParagraphs);
+}
+.irancast-banner .banner-content .left-section-banner p{
+    color: var(--LightParagraphs);
+    opacity: 0.7;
+}
+
+/* The player styles: */
+.custom-player {
+    background: var(--SecondMaincolor);
+    color: var(--LightParagraphs);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 24px 66px rgba(0,0,0,0.7);
+    width: 500px;
+    direction: ltr;
+    z-index: 5;
+}
+.custom-player>i {
+    font-size: 10px;
+    margin-right: -7px;
+}
+.custom-player .play-pause {
+    background-color: var(--TenPercentWhite);
+    border: var(--MainBorder);
+    color: var(--LightParagraphs);
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.custom-player .progress-container .time .duration{
+    position: absolute;
+    right: 0;
+    top: 14px;
+}
+.custom-player .progress-container .time .current{
+    position: absolute;
+    left: 0;
+    top: 14px;
+}
+.custom-player .progress-container {
+    flex: 1;
+    height: 6px;
+    background: #333;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+.custom-player .progress {
+    height: 100%;
+    width: 0;
+    background: #00ff99;
+    border-radius: 3px;
+    transition: width 0.1s linear;
+}
+.custom-player .time {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.custom-player .volume-renge-div {
+    position: relative;
+    width: 53px;
+    transform: translateY(-100%);
+    height: 5px;
+}
+.custom-player .volume {
+    cursor: pointer;
+    position: absolute;
+    background: #d3d3d3;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    height: 8px;
+    background: linear-gradient(to right, white 0%, #555 0%);
+
+    width: 100%;
+    top: 50%;
+    right: 0;
+    z-index: 3;
+}
+.custom-player .sub-range {
+    z-index: 2;
+    position: absolute;
+    background-color: var(--TenPercentWhite);
+    border-radius: 10px;
+    width: 100%;
+    height: 4px;
+    top: 76%;
+    right: 0;
+}
+.custom-player button{
+    font-size: 25px;
+}
+.custom-player .volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 4px;
+    height: 4px;
+    background: var(--DarkParagraphs);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+
+    outline: 2px solid #fff;
+}
+/* season-category section: */
+.season-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-top: 60px;
+
+    margin-bottom: 300px;
+}
+.season-category .seasons,
+.season-category .episodes{
+    width: 50%;
+    position: relative;
+}
+.season-category .seasons .four-sesasons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.season-category .seasons .four-sesasons .each-season {
+    width: 49%;
+    max-height: 70px;
+    border-radius: 16px;
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    background-color: #ebebeb;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.season-category .seasons .four-sesasons .each-season:hover{
+    background: linear-gradient(
+            180deg,
+            color-mix(in srgb, #fff 20%, transparent) 0%,
+            #ffffff00 100%
+    );
+    background-color: var(--maincolor);
+    box-shadow: 2px 2px 9px -1px var(--maincolor);
+}
+.season-category .seasons .four-sesasons .each-season:hover h3{
+    color: var(--LightParagraphs);
+}
+.season-category .seasons .four-sesasons .each-season:hover .episode-count{
+    color: var(--LightParagraphs);
+}
+.season-category .seasons .four-sesasons .each-season:hover .season-num{
+    background-color: var(--TenPercentWhite);
+    color: var(--LightParagraphs);
+}
+.season-category .seasons .seasons-title {
+    background-color: var(--SecondMaincolor);
+    width: 600px;
+    height: 132px;
+    position: absolute;
+    top: -62px;
+    right: -126px;
+    border-radius: 16px;
+}
+.season-category .seasons .seasons-title .seasons-title-subdiv {
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    padding: 30px;
+    flex-direction: row-reverse;
+}
+.seasons-title .seasons-title-subdiv .season-title-text{
+    color: var(--LightParagraphs);
+}
+.seasons-title .seasons-title-subdiv .season-title-text i {
+    padding: 12px;
+    border: var(--MainBorder);
+    background: var(--TenPercentWhite);
+    border-radius: 8px;
+}
+.seasons-title .seasons-title-subdiv .season-title-text h2 {
+    display: inline-block;
+    margin-right: 8px;
+}
+.seasons-title .seasons-title-subdiv img{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+.seasons-title .seasons-title-subdiv .season-title-text h2 span{
+    color: var(--maincolor);
+}
+.seasons-title .seasons-title-subdiv .season-title-text p{
+    opacity: 0.7;
+}
+.season-category .seasons .subshape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 94px 32px 32px 32px;
+    top: 0;
+    right: 0;
+}
+.season-category .seasons .four-sesasons .each-season>span {
+    padding: 8px 17px;
+    color: var(--maincolor);
+    font-weight: bold;
+    background-color: var(--LightSections);
+    border: var(--MainBorder);
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+.season-category .seasons .four-sesasons .each-season div{
+
+}
+.season-category .seasons .four-sesasons .each-season div span {
+    color: var(--DarkParagraphs);
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0.7;
+}
+.season-category .seasons .four-sesasons .each-season div h3 {
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+    color: var(--DarkParagraphs);
+    font-weight: 500;
+}
+.season-category .episodes .episodes-div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 30px 32px 22px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.season-category .episodes .side-shape{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24.7%;
+    background-color: var(--LightShapes);
+    border: var(--MainBorder);
+    border-radius: 10px 10px 20px 10px;
+}
+.season-category .episodes>a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24.7%;
+    background-color: var(--LightShapes);
+    border: var(--MainBorder);
+    border-radius: 10px 10px 30px 10px;
+    color: var(--DarkParagraphs);
+    padding: 10px 27px;
+}
+.season-category .episodes>i{
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    color: var(--maincolor);
+    font-size: 20px;
+}
+.season-category .episodes .episodes-div .episodes-list{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.season-category .episodes .episodes-div .episodes-title{
+
+}
+.season-category .episodes .episodes-div .episodes-list .each-episode {
+    width: 100%;
+    border-radius: 16px;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 14px;
+    max-height: 70px;
+    align-items: center;
+    align-content: center;
+}
+.season-category .episodes .episodes-div .episodes-list .each-episode .title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.season-category .episodes .episodes-div .episodes-list .each-episode .title h4{
+    font-size: 14px;
+    opacity: 0.7;
+    font-weight: 400;
+}
+.season-category .episodes .episodes-div .episodes-list .each-episode .title span{
+    padding: 6px 17px;
+    background-color: var(--LightSections);
+    border-radius: 8px;
+    color: var(--maincolor);
+    font-weight: bold;
+}
+.season-category .episodes .episodes-div .episodes-list .each-episode .time {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.season-category .episodes .episodes-div .episodes-list .each-episode .time i {
+    padding: 12px 15px;
+    background-color: var(--LightSections);
+    color: var(--maincolor);
+    border-radius: 8px;
+}
+.season-category .episodes .episodes-div .episodes-title>i{
+    padding: 12px;
+    margin-left: 8px;
+    border-radius: 8px;
+    color: var(--maincolor);
+    background: linear-gradient(
+            color-mix(in srgb, var(--maincolor) 10%, transparent) 0%,
+            color-mix(in srgb, var(--maincolor) 10%, transparent) 100%
+    );
+    border: var(--MainBorder);
+}
+.season-category .episodes .episodes-div .episodes-title h3 {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 800;
+}
+.season-category .episodes .episodes-div .episodes-title h3 span {
+    color: var(--maincolor);
+}
+
+
+
+
+
+
+
+
+
+
+

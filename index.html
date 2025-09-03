@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Chat با Clip-Path Responsive</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .bubble-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .bubble {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bubble:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .bubble-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            clip-path: path("M93.75 14.24 C93.75 6.37 87.48 0 79.74 0 H23.32 C13.89 0 6.25 7.77 6.25 17.36 V70.14 C6.25 79.73 13.89 87.5 23.32 87.5 H80.21 C87.69 87.5 93.75 81.34 93.75 73.74 V70.05 C93.75 67.84 92.69 65.78 90.9 64.53 C89.12 63.27 88.06 61.21 88.06 59 V29.22 C88.06 27.02 89.12 24.95 90.9 23.7 C92.69 22.44 93.75 20.38 93.75 18.18 V14.24 Z");
+            -webkit-clip-path: path("M93.75 14.24 C93.75 6.37 87.48 0 79.74 0 H23.32 C13.89 0 6.25 7.77 6.25 17.36 V70.14 C6.25 79.73 13.89 87.5 23.32 87.5 H80.21 C87.69 87.5 93.75 81.34 93.75 73.74 V70.05 C93.75 67.84 92.69 65.78 90.9 64.53 C89.12 63.27 88.06 61.21 88.06 59 V29.22 C88.06 27.02 89.12 24.95 90.9 23.7 C92.69 22.44 93.75 20.38 93.75 18.18 V14.24 Z");
+        }
+
+        .bubble-mask {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, #ff9966, #ff5e62);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bubble-mask-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .caption {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        .code-container {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            overflow-x: auto;
+        }
+
+        .code-container h3 {
+            margin-bottom: 15px;
+            color: #fdbb2d;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+
+        .instructions {
+            background: #e8f4fc;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-right: 5px solid #2575fc;
+        }
+
+        .instructions h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .instructions ul {
+            padding-right: 20px;
+            line-height: 1.8;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .bubble-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bubble, .bubble-mask {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Bubble Chat با Clip-Path Responsive</h1>
+
+    <p class="description">
+        این نمونه از دو روش برای ایجاد bubble chat استفاده می‌کند: clip-path و SVG mask. هر دو روش کاملاً responsive هستند و با تغییر سایز صفحه، شکل bubble حفظ می‌شود.
+    </p>
+
+    <div class="bubble-container">
+        <div>
+            <div class="bubble">
+                <img class="bubble-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Bubble Example">
+            </div>
+            <p class="caption">روش clip-path با درصد</p>
+        </div>
+
+        <div>
+            <svg width="0" height="0" viewBox="0 0 64 64">
+                <defs>
+                    <clipPath id="header-user-picture" clipPathUnits="objectBoundingBox">
+                        <path d="M0.9375 0.1424 C0.9375 0.0637 0.8748 0 0.7974 0 H0.2332 C0.1389 0 0.0625 0.0777 0.0625 0.1736 V0.7014 C0.0625 0.7973 0.1389 0.875 0.2332 0.875 H0.8021 C0.8769 0.875 0.9375 0.8134 0.9375 0.7374 V0.7005 C0.9375 0.6784 0.9269 0.6578 0.909 0.6453 C0.8912 0.6327 0.8806 0.6121 0.8806 0.59 V0.2922 C0.8806 0.2702 0.8912 0.2495 0.909 0.237 C0.9269 0.2244 0.9375 0.2038 0.9375 0.1818 V0.1424 Z"/>
+                    </clipPath>
+                </defs>
+            </svg>
+
+            <div class="bubble-mask">
+<!--                <img class="bubble-mask-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Bubble Example with Mask" style="clip-path: url(#bubble-clip);">-->
+                <img class="bubble-mask-img" src="my-picture.jpg" alt="Bubble Example with Mask" style="clip-path: url(#header-user-picture);">
+            </div>
+            <p class="caption">روش SVG Mask</p>
+        </div>
+    </div>
+
+    <div class="code-container">
+        <h3>کد Clip-Path برای استفاده در CSS:</h3>
+        <pre>
+clip-path: path("M93.75 14.24 C93.75 6.37 87.48 0 79.74 0 H23.32 C13.89 0 6.25 7.77 6.25 17.36 V70.14 C6.25 79.73 13.89 87.5 23.32 87.5 H80.21 C87.69 87.5 93.75 81.34 93.75 73.74 V70.05 C93.75 67.84 92.69 65.78 90.9 64.53 C89.12 63.27 88.06 61.21 88.06 59 V29.22 C88.06 27.02 89.12 24.95 90.9 23.7 C92.69 22.44 93.75 20.38 93.75 18.18 V14.24 Z");
+-webkit-clip-path: path("M93.75 14.24 C93.75 6.37 87.48 0 79.74 0 H23.32 C13.89 0 6.25 7.77 6.25 17.36 V70.14 C6.25 79.73 13.89 87.5 23.32 87.5 H80.21 C87.69 87.5 93.75 81.34 93.75 73.74 V70.05 C93.75 67.84 92.69 65.78 90.9 64.53 C89.12 63.27 88.06 61.21 88.06 59 V29.22 C88.06 27.02 89.12 24.95 90.9 23.7 C92.69 22.44 93.75 20.38 93.75 18.18 V14.24 Z");
+            </pre>
+    </div>
+
+    <div class="instructions">
+        <h3>راهنمای استفاده:</h3>
+        <ul>
+            <li>کد بالا را در استایل عنصر تصویر خود قرار دهید</li>
+            <li>برای حفظ نسبت bubble، اطمینان حاصل کنید که عنصر حاوی تصویر دارای aspect ratio مربعی (۱:۱) باشد</li>
+            <li>مقادیر درصدی استفاده شده در clip-path باعث می‌شود شکل bubble در اندازه‌های مختلف responsive باشد</li>
+            <li>روش SVG mask گزینه بهتری برای پشتیبانی از مرورگرهای قدیمی‌تر است</li>
+            <li>می‌توانید رنگ و سایز bubble را با تغییر مقادیر در کد CSS شخصی‌سازی کنید</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

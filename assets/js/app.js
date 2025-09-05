@@ -133,5 +133,23 @@ volumeIcon.addEventListener('click', () => {
     }
 });
 
+// دستور زیر باعث میشه که پاراگراف تعیین شده، 4 کلمه در خط اول داشته باشه و مابقی کلمات به خط بعد برن. (برای عدم تداخل متن و شیپ)
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".card-desc-p-limit");
+
+    elements.forEach(function (el) {
+        const words = el.innerText.trim().split(/\s+/);
+
+        if (words.length <= 5) {
+            // اگه کل متن ۴ کلمه یا کمتر بود
+            el.innerHTML = `<span>${words.join(" ")}</span>`;
+        } else {
+            const firstLine = words.slice(0, 5).join(" ");   // ۴ کلمه اول
+            const rest = words.slice(5).join(" ");           // باقی کلمات
+            el.innerHTML = `<span>${firstLine}</span><br><span>${rest}</span>`;
+        }
+    });
+});
+
 
 

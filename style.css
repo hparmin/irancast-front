@@ -51,21 +51,23 @@ a{
     align-items: center;
 }
 /* SVGs: */
-.irancast-header > svg{
+.irancast-header > svg,
+.irancast-subscribe .each-subscribe .each-subscribe-header{
     fill: var(--SecondMaincolor);
 }
-
 .season-category .episodes svg>path:nth-child(2),
 .season-category .seasons svg>path:nth-child(2),
 .light-shape-bg,
 .remaining-time svg path:nth-child(2),
-.financial-support svg path:nth-child(2)
+.financial-support svg path:nth-child(2),
+.irancast-favorite .left-section svg path:nth-child(2),
+.irancast-subscribe .each-subscribe .light-shape-bg path:nth-child(2)
 {
     fill: var(--LightShapes);
 }
-
 .irancast-banner>.shape-parent>svg,
-.irancast-new-episodes .container .background-svg path
+.irancast-new-episodes .container .background-svg path,
+.right-section svg path
 {
     fill: var(--maincolor);
 }
@@ -490,7 +492,7 @@ ul{
 }
 
 /* The player styles: */
-.custom-player {
+.banner-content .custom-player {
     background: var(--SecondMaincolor);
     color: var(--LightParagraphs);
     padding: 20px;
@@ -1027,6 +1029,10 @@ ul{
 }
 /*first-advertisement section:*/
 /*Guest section*/
+
+.irancast-first-advertisement{
+    margin: 76px 0px 0px 0px;
+}
 .irancast-first-advertisement .container {
     display: flex;
     gap: 16px;
@@ -1050,7 +1056,6 @@ ul{
 .irancast-first-advertisement .container .financial-support{
     position: relative;
     padding-top: 75px;
-    margin: 76px 0px 300px 0px;
     width: 50%;
 }
 .irancast-first-advertisement .container .remaining-time .remaining-title h3 {
@@ -1180,23 +1185,575 @@ ul{
     color: var(--maincolor);
     margin-left: 12px;
 }
-.irancast-first-advertisement .container .financial-support .financial-content div span{
+/* irancast-favorite Section: */
+.irancast-favorite{
+    margin: 64px 0px 0px 0px;
+}
+.irancast-favorite .header {
+    display: flex;
+    justify-items: center;
+    gap: 12px;
+    align-content: center;
+    align-items: center;
+}
+.irancast-favorite .container>.header i {
+    background: rgba(256,256,256,50%);
+    color: var(--maincolor);
+    border-radius: 8px;
+    border: var(--MainBorder);
+    padding: 12px;
+}
+.irancast-favorite .header h2{
 
 }
+.irancast-favorite .header h2 span{
+    color: var(--maincolor);
+}
+.irancast-favorite .header p {
+    color: var(--DarkParagraphs);
+    opacity: 0.7;
+    margin-right: 12px;
+}
+.hor-line {
+    height: 1px;
+    flex-grow: 1;
+    background-color: var(--TenPercentBlack);
+}
+.irancast-favorite .header p span{
+    font-weight: bold;
+}
+.irancast-favorite .header a{
+    padding: 6px 15px;
+    border-radius: 8px;
+    background-color: var(--LightSections);
+    border: var(--MainBorder);
+    color: var(--DarkParagraphs);
+}
+.irancast-favorite>.container>.content {
+    display: flex;
+    gap: 16px;
+    margin-top: 37px;
+    align-items: flex-start;
+}
+.irancast-favorite .content .right-section,
+.irancast-favorite .content .left-section{
+    position: relative;
+    width: 50%;
+}
+.irancast-favorite .content .left-section{
+    min-height: 304px;
+}
+.irancast-favorite .content .left-section>svg{
+    position: absolute;
+    bottom: 0;
+    z-index: -5;
+}
+.irancast-favorite .content .left-section .header {
+    padding: 28px 23px 28px 100px;
+    background-color: var(--DarkShapes);
+    border-radius: 16px;
+    display: inline-block;
+    /* position: absolute; */
+    /* z-index: -2; */
+}
+.irancast-favorite .content .left-section .header i{
+    padding: 13px 14px;
+    color: var(--LightParagraphs);
+    background-color: var(--TenPercentWhite);
+    border: var(--MainBorder);
+    border-radius: 8px;
+    position: relative;
+}
+.irancast-favorite .content .left-section .header i::after{
+    content: "";
+    position: absolute;
+    /*z-index: -1;*/
+    top: 50%;
+    right: 50%;
+    box-shadow: 7px 8px 25px 15px var(--maincolor);
+}
+.irancast-favorite .content .left-section .header h3 {
+    display: inline-block;
+    color: var(--LightParagraphs);
+    margin-right: 8px;
+}
+.irancast-favorite .content .left-section .header h3 span{
+    color: var(--maincolor);
+}
+.irancast-favorite .content .left-section .left-content{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0px 32px 24px 32px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.irancast-favorite .content .left-section .left-content>div {
+    padding: 10px 14px;
+    border-radius: 16px;
+    background-color: var(--SiteBackgroundColor);
+    display: flex;
+    width: 49%;
+    gap: 12px;
+    align-items: center;
+    height: 69px;
+    transition: all 0.2s ease-in-out;
+}
+.irancast-favorite .content .left-section .left-content>div a {
+    padding: 7px 14px;
+    color: var(--maincolor);
+    border-radius: 8px;
+    background: var(--LightParagraphs);
+}
+.irancast-favorite .content .left-section .left-content>div:hover{
+    box-shadow: 0px 30px 62px -17px var(--maincolor);
+    background-color: var(--maincolor);
+    color: var(--LightParagraphs);
+}
+.irancast-favorite .content .left-section .left-content>div:hover a{
+    background-color: var(--TenPercentWhite);
+    color: var(--LightParagraphs);
+}
+.irancast-favorite .content .left-section .left-content>div div {
+    max-width: 80%;
+    line-height: 18px;
+}
 
+.irancast-favorite .content .left-section .left-content>div div span{
+    font-size: 14px;
+    opacity: 0.7;
+}
+.irancast-favorite .content .left-section .left-content>div div p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    font-size: 14px;
+}
+.irancast-favorite .content .right-section .custom-player {
+    width: 90%;
+    background-color: var(--DarkShapes);
+    border-radius: 24px;
+    padding: 16px;
+    position: absolute;
+    bottom: -43px;
+    right: 50%;
+    transform: translateX(50%);
 
+    color: var(--LightParagraphs);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 24px 66px rgba(0,0,0,0.7);
+    direction: ltr;
+    z-index: 5;
+}
+.irancast-favorite .content .right-section .custom-player>button{
+    font-size: 17px;
+}
+.irancast-favorite .content .right-section .content {
+    display: flex;
+    gap: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px 40px;
+    align-items: center;
+}
+.irancast-favorite .content .right-section .content .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--LightParagraphs);
+    align-items: flex-start;
+}
+.irancast-favorite .content .right-section .content .texts .title {
+    padding: 4px 4px 4px 7px;
+    border-radius: 12px;
+    background-color: var(--TenPercentWhite);
+    border: var(--MainBorder);
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+}
+.irancast-favorite .content .right-section .content .texts h3 {
+    margin-top: 5px;
+    font-size: 24px;
+}
+.irancast-favorite .content .right-section .content .texts span{
+    opacity: 0.7;
+}
+.irancast-favorite .content .right-section .content .texts.title img{
 
+}
+.irancast-favorite .content .right-section .content>figure{
+    max-width: 20%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.irancast-favorite .content .right-section .content>figure>img{
+    width: 100%;
+    border-radius: 16px;
+}
+/* irancast-subscribe section: */
+.irancast-subscribe{
+    margin: 68px 0px 0px 0px;
+}
+.irancast-subscribe>.header{
 
+}
+.irancast-subscribe>.header .container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.irancast-subscribe>.header .container i {
+    background-color: #ffffff88;
+    padding: 10px;
+    border: var(--MainBorder);
+    border-radius: 8px;
+    color: var(--maincolor);
+    margin-right: 20px;
+}
+.irancast-subscribe>.header .container h2 {
+    margin-right: 4px;
+}
+.irancast-subscribe>.header .container h2 span {
+    color: var(--maincolor);
+}
+.irancast-subscribe>.header .container p {
+    margin-right: 18px;
+}
+.irancast-subscribe>.header .container .hor-line{
+    margin-right: 29px;
+}
+.irancast-subscribe>.content{
 
+}
+.irancast-subscribe>.content .container {
+    margin-top: 24px;
+    padding-top: 32px;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+.irancast-subscribe>.content .container .each-subscribe {
+    position: relative;
+    padding-top: 50px;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+    max-width: 379px;
+}
+.irancast-subscribe>.content .container .each-subscribe:hover{
+    transform: translateY(-32px);
+}
+.irancast-subscribe>.content .container .each-subscribe:hover .each-subscribe-header path{
+    fill: var(--maincolor);
+}
+.irancast-subscribe>.content .container .each-subscribe:hover .buy-link{
+    background-color: var(--maincolor);
+}
+.irancast-subscribe>.content .container .each-subscribe .each-card-header-content div{
+    transition: all 0.3s ease-in-out;
+    color: var(--LightParagraphs);
+}
+.irancast-subscribe>.content .container .each-subscribe:hover .each-card-header-content div{
+    color: var(--DarkParagraphs);
+}
+.irancast-subscribe>.content .container .each-subscribe:hover .each-card-header-content div p span{
+    color: var(--LightParagraphs);
+}
+.irancast-subscribe>.content .container .each-subscribe .each-subscribe-header{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90%;
+    transition: all 0.3s ease-in-out;
+}
+.irancast-subscribe>.content .container .each-subscribe .each-subscribe-header path{
+    transition: all 0.3s ease-in-out;
+}
+.irancast-subscribe>.content .container .each-subscribe .each-card-header-content {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90%;
+    padding: 24px;
+    display: flex;
+    color: var(--LightParagraphs);
+    gap: 16px;
+    align-items: center;
+}
+.irancast-subscribe>.content .container .each-subscribe .each-card-header-content i {
+    padding: 13px 16px;
+    background-color: var(--TenPercentWhite);
+    border-radius: 8px;
+    border: var(--MainBorder);
+    font-size: 32px;
+    position: relative;
+}
+.irancast-subscribe>.content .container .each-subscribe .each-card-header-content i::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    right: 50%;
+    box-shadow: 7px 8px 26px 28px var(--maincolor);
+}
+.irancast-subscribe>.content .container .each-subscribe .each-card-header-content div>span {
+    font-size: 14px;
+}
+.irancast-subscribe>.content .container .each-subscribe .each-card-header-content div p {
+    font-size: 12px;
+}
+.irancast-subscribe>.content .container .each-subscribe .each-card-header-content div p span {
+    color: var(--maincolor);
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.irancast-subscribe>.content .container .each-subscribe>.buy-link>a {
+    display: block;
+    padding: 14px;
+    color: var(--LightParagraphs);
+    border-radius: 16px;
+    background-color: var(--TenPercentWhite);
+    text-align: center;
+}
+.irancast-subscribe>.content .container .each-subscribe>.buy-link{
+    position: absolute;
+    bottom: 18px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90%;
+    color: var(--LightParagraphs);
+    border-radius: 16px;
+    background-color: var(--DarkShapes);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.irancast-subscribe>.content .container .each-subscribe .each-card-content {
+    position: absolute;
+    width: 90%;
+    bottom: 101px;
+    right: 50%;
+    transform: translatex(50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.irancast-subscribe>.content .container .each-subscribe .each-card-content>div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.irancast-subscribe>.content .container .each-subscribe .each-card-content>div i {
+    padding: 7px;
+    border: var(--MainBorder);
+    background-color: var(--maincolor);
+    color: var(--LightParagraphs);
+    border-radius: 8px;
+    font-size: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.irancast-subscribe>.content .container .each-subscribe:hover .each-card-content>div i{
+    background-color: var(--DarkShapes);
+    color: var(--LightParagraphs);
+}
+/* irancast-premium section */
+.irancast-premium{
+    margin: 91px 0px 300px 0px;
+}
+.irancast-premium .container {
+    position: relative;
+}
+.irancast-premium .container header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 21px 0px 23px 0px;
+}
+.irancast-premium .container header i{
+    background: rgba(256, 256, 256, 50%);
+    color: var(--maincolor);
+    border-radius: 8px;
+    border: var(--MainBorder);
+    padding: 12px;
+}
+.irancast-premium .container header p {
+    color: var(--DarkParagraphs);
+    opacity: 0.7;
+    margin-right: 18px;
+    margin-left: 5px;
+}
+.irancast-premium .container header a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 6px 15px;
+    border-radius: 10px 10px 30px 10px;
+    background-color: var(--LightSections);
+    border: var(--MainBorder);
+    color: var(--DarkParagraphs);
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.irancast-premium .container .background-svg {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 110%;
+    border-radius: 16px;
+}
+.irancast-premium .container .premium-cards{
+    display: flex;
+    justify-content: space-between;
+}
+.irancast-premium .container .premium-cards .each-card {
+    height: 352px;
+    width: 288px;
+    border-radius: 14px;
+    position: relative;
+    padding: 60px 12px 12px 12px;
+}
+.irancast-premium .container .premium-cards .each-card::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    box-shadow: 19px 10px 141px 25px var(--DarkShapes);
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+}
+.irancast-premium .container .premium-cards .each-card:hover::after{
+    opacity: 1;
+}
+.irancast-premium .container .premium-cards .each-card>a {
+    padding: 20px 26px;
+    border-radius: 16px;
+    position: absolute;
+    bottom: 8px;
+    left: 14px;
+    background-color: var(--DarkShapes);
+    color: var(--LightParagraphs);
+    z-index: 5;
+    font-size: 12px;
+    transition: all 0.2s ease-in-out;
+}
+.irancast-premium .container .premium-cards .each-card:hover >a{
+    background-color: var(--maincolor);
+    box-shadow: 0px 0px 30px 0px var(--maincolor);
+}
+.irancast-premium .container .premium-cards .each-card .content {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    flex-direction: column;
+}
+.irancast-premium .container .premium-cards .each-card .content .desc {
+    position: relative;
+    padding: 5px 21px 32px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+.irancast-premium .container .premium-cards .each-card .content .desc p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.irancast-premium .container .premium-cards .each-card .content .desc p.card-desc-p-limit{
+    margin-top: 14px;
+    font-weight: bold;
+}
+.irancast-premium .container .premium-cards .each-card .content .desc p.count{
+    font-size: 14px;
+    color: var(--maincolor);
+}
+.irancast-premium .container .premium-cards .each-card .content .desc p.count::after {
+    content: "";
+    background-color: var(--maincolor);
+    width: 4px;
+    height: 15px;
+    border-radius: 8px 0px 0px 8px;
+    position: absolute;
+    right: 0px;
+    top: 9px;
+}
+.irancast-premium .container .premium-cards .each-card .content .desc .time {
+    color: var(--DarkParagraphs);
+    opacity: 0.5;
+    gap: 8px;
+}
+.irancast-premium .container .premium-cards .each-card .content .desc i {
+    margin-left: 8px;
+}
+.irancast-premium .container .premium-cards .each-card .content .desc span {
+    font-size: 14px;
+}
+.irancast-premium .container .premium-cards .each-card .content .desc svg {
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+.irancast-premium .container .premium-cards .each-card .content .desc svg path{
+    opacity: 0.1;
+    stroke: var(--DarkParagraphs);
+}
+.irancast-premium .container .premium-cards .each-card .sub-shape {
+    position: absolute;
+    right: 1px;
+    top: 60px;
+    width: 100%;
+    height: 292px;
+}
+.irancast-premium .container .premium-cards .each-card .sub-shape2 {
+    position: absolute;
+    right: 4px;
+    top: 60px;
+    width: 99%;
+    height: 292px;
+}
+.irancast-premium .container .premium-cards .each-card .sub-shape2 .sub-div-relative {
+    width: 96%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 16px;
+    transition: all 0.2s ease-in-out;
+    margin-right: 6px;
+    border: 1px solid #0000001a;
+}
+.irancast-premium .container .premium-cards .each-card:hover .sub-div-relative{
+    background-color: var(--DarkShapes);
+}
+.z-index--1{
+    z-index: -1;
+}
+.irancast-premium .container .premium-cards .each-card .content img{
+    clip-path: url(#new-episode-card-pic);
+    width: 263px;
+    height: 171px;
+    margin-right: 50%;
+    transform: translate(50%);
+}
+.irancast-premium .container>a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 146.17px;
+    background-color: var(--LightShapes);
+    border: var(--MainBorder);
+    border-radius: 10px 10px 30px 10px;
+    color: var(--DarkParagraphs);
+    padding: 10px 27px;
+    white-space: nowrap;
+}

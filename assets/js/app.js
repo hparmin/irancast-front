@@ -166,3 +166,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+//comment sliders:
+$('#comment-slider').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    rtl: true,
+    responsiveRefreshRate: 100,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 3
+        }
+    },
+    // navText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>']
+})
+
+

@@ -57,7 +57,8 @@ a{
 .irancast-book .right-section .colored-svg path,
 .irancast-book .left-section .colored-svg path,
 .irancast-read-more .container>svg path,
-.irancast-faq .container .content .faq-left-svg
+.irancast-faq .container .content .faq-left-svg,
+footer.irancast-footer .footer-top>svg path
 {
     fill: var(--SecondMaincolor);
 }
@@ -2618,7 +2619,7 @@ ul{
 }
 /* FAQ section: */
 .irancast-faq{
-    margin: 120px 0px 300px 0px;
+    margin: 120px 0px 0px 0px;
 }
 .irancast-faq header {
     display: flex;
@@ -2702,7 +2703,23 @@ ul{
     width: 366px;
     margin-top: 16px;
 }
-
+footer.irancast-footer{
+    margin: 189px 0px 0px 0px;
+    width: 100%;
+}
+footer.irancast-footer .footer-top {
+    width: 100%;
+    position: relative;
+    margin-bottom: -10px;
+}
+footer.irancast-footer .footer-body {
+    padding-top: 27px;
+    background-color: var(--DarkShapes);
+}
+footer.irancast-footer .footer-body .copyright{
+    color: var(--LightParagraphs);
+    padding-bottom: 28px;
+}
 
 
 

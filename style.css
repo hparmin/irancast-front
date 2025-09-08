@@ -2496,8 +2496,63 @@ ul{
     width: 635px;
     height: 159px;
 }
+.irancast-comments header .header-content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 41px 70px;
+    display: flex;
+    gap: 8px;
+    color: var(--LightParagraphs);
+    align-content: center;
+    align-items: center;
+}
+.irancast-comments header .header-content i{
+    padding: 10px;
+    background-color: var(--TenPercentWhite);
+    border: var(--MainBorder);
+    border-radius: 8px;
+    color: var(--LightParagraphs);
+}
+.irancast-comments header .header-content h2{
+    margin-left: 16px;
+}
+.irancast-comments header .header-content span{
+    opacity: 0.7;
+}
 .irancast-comments .container{
 
+}
+.irancast-comments .container .content{
+    position: relative;
+    padding: 0px 36px;
+}
+.irancast-comments .container .content .sub-shaddow {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: 50%;
+    box-shadow: 0px -42px 126px 18px black;
+}
+.irancast-comments .container .content .owl-nav .owl-prev{
+    right: -20px;
+}
+.irancast-comments .container .content .owl-nav .owl-next{
+    left: -20px;
+}
+.irancast-comments .container .content .owl-nav button {
+    position: absolute;
+    top: 49%;
+    transform: translateY(-50%);
+}
+.irancast-comments .container .content .owl-nav button span {
+    padding: 15px 7px;
+    background-color: var(--LightSections);
+    border-radius: 8px;
+    font-size: 12px;
+}
+.irancast-comments .container .content .owl-dots{
+    position: absolute;
 }
 .irancast-comments .container .each-comment {
     height: 163px;

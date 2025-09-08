@@ -186,7 +186,7 @@ $('#comment-slider').owlCarousel({
             items: 3
         }
     },
-    // navText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>']
+    navText: ['<span class="fa-solid fa-arrow-right"></span>', '<span class="fa-solid fa-arrow-left"></span>']
 })
 
 

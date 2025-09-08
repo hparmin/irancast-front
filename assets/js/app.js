@@ -190,3 +190,128 @@ $('#comment-slider').owlCarousel({
 })
 
 
+//کد های بخش faq:
+document.addEventListener('DOMContentLoaded', function() {
+    const theHeadElements = document.querySelectorAll('.the-head');
+
+    theHeadElements.forEach(head => {
+        const parentFaq = head.parentElement; // .each-faq
+        const content = head.nextElementSibling; // .the-content
+        const icon = head.querySelector('i');
+        // انتخاب svg: اگر کلاس مخصوص داشتی از اون استفاده می‌کنیم، در غیر اینصورت هر svg داخل head.
+        const svg = head.querySelector('.faq-each-svg') || head.querySelector('svg');
+
+        // ***** تنظیم اولیه (فقط در صورتی که استایل‌ها تنظیم نشده باشند) *****
+        // محتوا
+        content.style.overflow = 'hidden';
+        content.style.transition = content.style.transition || 'opacity 300ms ease, max-height 300ms ease';
+        // اگر از قبل باز نیست، بسته قرار بدیم
+        if (!parentFaq.classList.contains('active')) {
+            content.style.display = 'none';
+            content.style.opacity = '0';
+            content.style.maxHeight = '0';
+        } else {
+            // اگر به صورت دستی در HTML کلاس active داشتیم، حالت باز را تنظیم کن
+            content.style.display = 'block';
+            content.style.opacity = '1';
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+
+        // svg
+        if (svg) {
+            svg.style.transition = svg.style.transition || 'opacity 300ms ease, transform 300ms ease';
+            if (!parentFaq.classList.contains('active')) {
+                svg.style.opacity = '0';
+                svg.style.visibility = 'hidden';
+                svg.style.transform = 'translateY(10px)';
+            } else {
+                svg.style.visibility = 'visible';
+                svg.style.opacity = '1';
+                svg.style.transform = 'translateY(20)';
+            }
+        }
+
+        // آیکون
+        if (icon) {
+            icon.style.transition = icon.style.transition || 'transform 300ms ease';
+            icon.style.transformOrigin = icon.style.transformOrigin || '50% 50%';
+            icon.style.transform = parentFaq.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+
+        // ***** کلیک روی head *****
+        head.addEventListener('click', function() {
+            const isOpen = parentFaq.classList.contains('active');
+
+            // ---------- آکاردئون: بستن بقیه آیتم‌های باز ----------
+            document.querySelectorAll('.each-faq.active').forEach(otherFaq => {
+                if (otherFaq === parentFaq) return; // آیتمِ فعلی را نِبُند
+                otherFaq.classList.remove('active');
+
+                const otherContent = otherFaq.querySelector('.the-content');
+                const otherIcon = otherFaq.querySelector('.the-head i');
+                const otherSvg = otherFaq.querySelector('.faq-each-svg') || otherFaq.querySelector('svg');
+
+                if (otherContent) {
+                    otherContent.style.opacity = '0';
+                    otherContent.style.maxHeight = '0';
+                    // بعد از پایان transition، display:none بذار
+                    setTimeout(() => { otherContent.style.display = 'none'; }, 300);
+                }
+                if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                if (otherSvg) {
+                    otherSvg.style.opacity = '0';
+                    otherSvg.style.transform = 'translateY(20px)';
+                    setTimeout(() => { otherSvg.style.visibility = 'hidden'; }, 300);
+                }
+            });
+
+            // ---------- حالا آیتم فعلی را باز یا ببند ----------
+            if (!isOpen) {
+                parentFaq.classList.add('active');
+
+                // نمایش محتوا و تعیین maxHeight براساس scrollHeight برای انیمیشن دقیق
+                content.style.display = 'block';
+                // فورس رِفلوی مرورگر تا transition کار کنه
+                void content.offsetHeight;
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.opacity = '1';
+
+                // svg نمایش
+                if (svg) {
+                    svg.style.visibility = 'visible';
+                    void svg.offsetHeight;
+                    svg.style.opacity = '1';
+                    svg.style.transform = 'translateY(10)';
+                }
+
+                // آیکون بچرخد
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                parentFaq.classList.remove('active');
+
+                // بستن محتوا
+                content.style.opacity = '0';
+                content.style.maxHeight = '0';
+                setTimeout(() => { content.style.display = 'none'; }, 300);
+
+                // svg مخفی
+                if (svg) {
+                    svg.style.opacity = '0';
+                    svg.style.transform = 'translateY(20px)';
+                    setTimeout(() => { svg.style.visibility = 'hidden'; }, 300);
+                }
+
+                // آیکون برگردد
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            }
+        });
+    });
+});
+
+
+
+
+
+
+
+

@@ -1,32 +1,98 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="fontawsome/all.min.css">
-    <link rel="stylesheet" href="assets/css/owl/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl/owl.theme.default.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سیستم نمایش پادکست</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .owl-carousel div{
-            background: red;
+        /* استایل‌های ضروری برای عملکرد */
+        .the-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 0 0 8px 8px;
+            margin-top: 5px;
+        }
+
+        .the-content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .the-head {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .the-head:hover {
+            background-color: #dee2e6;
+        }
+
+        .the-head i {
+            transition: transform 0.3s ease;
+        }
+
+        .the-head.active i {
+            transform: rotate(180deg);
+        }
+
+        .each-faq {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
-
-<div class="owl-carousel" id="comment-slider">
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
+<!-- ساختار HTML شما -->
+<div class="each-faq">
+    <div class="the-head">
+        <p>چگونه پادکست خود را آپلود کنیم؟</p>
+        <div style="display: flex; align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284 30" fill="none" width="40" height="20">
+                <path opacity="0.1"
+                      d="M0 29L60.2452 29C68.7321 29 76.8714 25.6286 82.8726 19.6274L92.6274 9.87257C98.6286 3.8714 106.768 0.499984 115.255 0.499984L284 0.499983"
+                      stroke="#0D1112"/>
+            </svg>
+            <i class="fas fa-angle-down"></i>
+        </div>
+    </div>
+    <div class="the-content">
+        <p>برای آپلود پادکست ابتدا وارد حساب کاربری خود شوید. سپس از بخش حساب کاربری، مدیریت حساب کاربری می توانید پادکست خود را آپلود و مدیریت کنید.</p>
+    </div>
 </div>
 
-<script src="assets/js/jquery-3.7.1.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/app.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.each-faq');
+
+        faqItems.forEach(item => {
+            const head = item.querySelector('.the-head');
+            const content = item.querySelector('.the-content');
+            const icon = head.querySelector('i');
+
+            head.addEventListener('click', function() {
+                // تغییر وضعیت نمایش محتوا
+                if (content.classList.contains('active')) {
+                    content.classList.remove('active');
+                    head.classList.remove('active');
+                } else {
+                    content.classList.add('active');
+                    head.classList.add('active');
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>

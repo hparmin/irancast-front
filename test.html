@@ -5,94 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سیستم نمایش پادکست</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="fontawsome/all.min.css">
+    <link rel="stylesheet" href="assets/css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl/owl.theme.default.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* استایل‌های ضروری برای عملکرد */
-        .the-content {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-radius: 0 0 8px 8px;
-            margin-top: 5px;
-        }
-
-        .the-content.active {
-            display: block;
-            opacity: 1;
-        }
-
-        .the-head {
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            background-color: #e9ecef;
-            border-radius: 8px;
-            transition: background-color 0.2s;
-        }
-
-        .the-head:hover {
-            background-color: #dee2e6;
-        }
-
-        .the-head i {
-            transition: transform 0.3s ease;
-        }
-
-        .the-head.active i {
-            transform: rotate(180deg);
-        }
-
-        .each-faq {
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-        }
     </style>
 </head>
 <body>
 <!-- ساختار HTML شما -->
-<div class="each-faq">
-    <div class="the-head">
-        <p>چگونه پادکست خود را آپلود کنیم؟</p>
-        <div style="display: flex; align-items: center;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284 30" fill="none" width="40" height="20">
-                <path opacity="0.1"
-                      d="M0 29L60.2452 29C68.7321 29 76.8714 25.6286 82.8726 19.6274L92.6274 9.87257C98.6286 3.8714 106.768 0.499984 115.255 0.499984L284 0.499983"
-                      stroke="#0D1112"/>
-            </svg>
-            <i class="fas fa-angle-down"></i>
-        </div>
+
+<footer class="irancast-footer">
+    <div class="container">
+        <svg style="width: 120%" class="footer-top-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 124" fill="none">
+            <path d="M1482 84C1482 106.091 1464.09 124 1442 124H-5.0247C-19.9226 124 -31.9998 111.923 -31.9998 97.0249V97.0249C-31.9998 82.127 -19.9226 70.0498 -5.02466 70.0498H1033.22C1047.55 70.0498 1060.79 62.3784 1067.92 49.9412L1085.02 20.1086C1092.15 7.67138 1105.39 0 1119.72 0H1442C1464.09 0 1482 17.9086 1482 40V84Z" fill="red"/>
+        </svg>
     </div>
-    <div class="the-content">
-        <p>برای آپلود پادکست ابتدا وارد حساب کاربری خود شوید. سپس از بخش حساب کاربری، مدیریت حساب کاربری می توانید پادکست خود را آپلود و مدیریت کنید.</p>
-    </div>
-</div>
+</footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const faqItems = document.querySelectorAll('.each-faq');
-
-        faqItems.forEach(item => {
-            const head = item.querySelector('.the-head');
-            const content = item.querySelector('.the-content');
-            const icon = head.querySelector('i');
-
-            head.addEventListener('click', function() {
-                // تغییر وضعیت نمایش محتوا
-                if (content.classList.contains('active')) {
-                    content.classList.remove('active');
-                    head.classList.remove('active');
-                } else {
-                    content.classList.add('active');
-                    head.classList.add('active');
-                }
-            });
-        });
-    });
-</script>
 </body>
 </html>

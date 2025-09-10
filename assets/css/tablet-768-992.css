@@ -1,0 +1,230 @@
+@media screen and (max-width: 992px) {
+    .container{
+        background-color: greenyellow;
+        width: 740px;
+    }
+    .irancast-banner .banner-content .right-section-banner{
+        width: 30%;
+    }
+    .irancast-banner .banner-content .right-section-banner::after {
+        padding: 97px;
+        top: 60%;
+    }
+    .irancast-banner .banner-content{
+        gap: 20px;
+    }
+    .irancast-banner .banner-content .left-section-banner{
+        gap: 0px;
+    }
+    .irancast-banner .banner-content .left-section-banner{
+        width: 70%;
+        padding: 9px 0 0px 0px;
+    }
+    .irancast-banner .banner-content .left-section-banner .podcast-title span{
+        font-size: 14px;
+    }
+    .irancast-banner .shape-parent .sub-shape{
+        bottom: 0;
+    }
+
+
+    .season-category .seasons .seasons-title {
+        width: 482px;
+        height: 100px;
+    }
+    .seasons-title .seasons-title-subdiv img {
+        right: -50px;
+        max-width: 37%;
+    }
+    .season-category .seasons .seasons-title .seasons-title-subdiv {
+        padding: 13px;
+    }
+    .season-category .seasons .subshape {
+        padding: 41px 11px 10px 11px;
+    }
+    .season-category .seasons .four-sesasons {
+        gap: 6px;
+    }
+    .season-category .seasons .four-sesasons .each-season {
+        max-height: 59px;
+        overflow: hidden;
+        padding: 5px;
+    }
+    .season-category .episodes .episodes-div .episodes-list {
+        gap: 6px;
+    }
+    .season-category .episodes .episodes-div .episodes-list .each-episode {
+        padding: 2px 14px;
+    }
+    .season-category .episodes .episodes-div {
+        padding: 2px 18px 22px 18px;
+        gap: 5px;
+    }
+    .season-category .episodes .episodes-div .episodes-list .each-episode .title h4 {
+        font-size: 10px;
+    }
+    .season-category .episodes .episodes-div .episodes-list .each-episode .title p {
+        font-size: 12px;
+    }
+    .season-category .episodes .episodes-div .episodes-list .each-episode .time i {
+        font-size: 14px;
+        padding: 10px 13px;
+    }
+    .season-category .episodes .episodes-div .episodes-list .each-episode .title span {
+        padding: 4px 15px;
+    }
+    .season-category .episodes>a {
+        font-size: 9px;
+    }
+    .season-category .episodes .episodes-div .episodes-title h3 {
+        font-size: 22px;
+    }
+    .season-category .seasons .four-sesasons .each-season div h3 {
+        font-size: 14px;
+    }
+    .season-category .seasons .four-sesasons .each-season div span {
+        font-size: 12px;
+    }
+
+    /* new-episodes section: */
+    .irancast-new-episodes .container .new-episodes-cards {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .irancast-new-episodes .container .new-episodes-cards .each-card .content .desc svg {
+        top: 30px;
+    }
+
+    /* irancast-first-advertisement section: */
+    .irancast-first-advertisement .container .remaining-time .remaining-title h3 {
+        font-size: 12px;
+    }
+    .financial-support .financial-title div div h3 {
+        font-size: 18px;
+    }
+    .irancast-first-advertisement .container .financial-support .financial-content div span{
+        font-size: 12px;
+    }
+    .irancast-first-advertisement .container .remaining-time, .irancast-first-advertisement .container .financial-support {
+        padding-top: 124px;
+    }
+    .irancast-first-advertisement .container .remaining-time .remaining-content div {
+        margin-top: 0px;
+    }
+
+    /* irancast-favorite section: */
+    .irancast-favorite .content .right-section svg.desktop{
+        display: none;
+    }
+    .irancast-favorite .content .right-section svg.tablet {
+        display: block;
+        width: 100%;
+        border-radius: 16px;
+    }
+    .irancast-favorite .content .right-section .content {
+        padding: 14px 18px;
+    }
+    .irancast-favorite .content .left-section .left-content>div {
+        padding: 4px 6px;
+    }
+    .irancast-favorite .content .left-section .left-content {
+        padding: 0px 10px 12px 10px;
+    }
+    .irancast-favorite .content .left-section .left-content>div {
+        height: 53px;
+        width: 47%;
+        overflow: hidden;
+    }
+    .irancast-favorite .content .left-section .header {
+        padding: 28px 23px 28px 53px;
+    }
+    .irancast-favorite .content .left-section {
+        min-height: 262px;
+    }
+
+    /* irancast-subscribe section: */
+
+
+    /* irancast-premium section: */
+    .irancast-premium .container .premium-cards {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .irancast-premium .container .premium-cards .each-card .content .desc svg {
+        top: 30px;
+    }
+
+    /* irancast-guest section: */
+    .irancast-guest .container .content {
+        flex-wrap: wrap;
+        gap: 21px;
+        justify-content: space-around;
+        margin-top: 33px;
+    }
+    .irancast-guest .container .content .each-card-guest {
+        width: 244px;
+    }
+
+    /* irancast-second-advertisement section: */
+    .irancast-second-advertisement .content {
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    .irancast-second-advertisement header {
+        width: 560px;
+        height: 96px;
+        margin: auto;
+        position: unset;
+        transform: unset;
+    }
+
+    /* irancast-help section: */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

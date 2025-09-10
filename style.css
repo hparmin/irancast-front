@@ -69,12 +69,15 @@ footer.irancast-footer .footer-top>svg path
 .financial-support svg path:nth-child(2),
 .irancast-favorite .left-section svg path:nth-child(2),
 .irancast-help .right-section svg path:nth-child(2),
-.irancast-subscribe .each-subscribe .light-shape-bg path:nth-child(2)
+.irancast-subscribe .each-subscribe .light-shape-bg path:nth-child(2),
+.irancast-second-advertisement .content .each-card>svg path:nth-child(2)
 {
     fill: var(--LightShapes);
 }
 .irancast-banner>.shape-parent>svg,
 .irancast-new-episodes .container .background-svg path,
+.irancast-new-episodes svg.mobile path,
+.irancast-premium svg.mobile path,
 .irancast-favorite .right-section svg path,
 .irancast-premium .container>svg path,
 .irancast-comments header>svg>path,
@@ -87,6 +90,10 @@ footer.irancast-footer .footer-top>svg path
     height: 1px;
     width: 100%;
     background-color: var(--TenPercentBlack);
+}
+/* redponsive: */
+.rm-lp {
+    display: none;
 }
 /* indedex header: */
 .irancast-header{
@@ -428,6 +435,9 @@ ul{
     position: relative;
     width: 100%;
 }
+.irancast-banner .shape-parent .responsive-shape{
+    display: none;
+}
 .irancast-banner .banner-content {
     position: absolute;
     display: flex;
@@ -668,6 +678,7 @@ ul{
     display: flex;
     padding: 30px;
     flex-direction: row-reverse;
+    box-shadow: 10px 10px 62px -17px var(--SecondMaincolor);
 }
 .seasons-title .seasons-title-subdiv .season-title-text{
     color: var(--LightParagraphs);
@@ -793,6 +804,19 @@ ul{
     opacity: 0.7;
     font-weight: 400;
 }
+.season-category .seasons .mobile-svg{
+    display: none;
+}
+.season-category .episodes .mobile-svg{
+    display: none;
+}
+.season-category .episodes .episodes-div .episodes-list .each-episode .title p{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .season-category .episodes .episodes-div .episodes-list .each-episode .title span{
     padding: 6px 17px;
     background-color: var(--LightSections);
@@ -845,6 +869,9 @@ ul{
     z-index: -1;
     width: 110%;
     border-radius: 16px;
+}
+.irancast-new-episodes svg.mobile{
+    display: none;
 }
 .irancast-new-episodes .container .new-episodes-header {
     display: flex;
@@ -1059,6 +1086,9 @@ ul{
     align-items: center;
     padding-left: 20px;
 }
+.irancast-first-advertisement .container .remaining-time svg.mobile {
+    display: none;
+}
 .irancast-first-advertisement .container .remaining-time,
 .irancast-first-advertisement .container .financial-support{
     position: relative;
@@ -1115,9 +1145,6 @@ ul{
     gap: 15px;
     margin-top: 23px;
 }
-.irancast-first-advertisement .container .remaining-time .remaining-content div h4 {
-    display: inline-block;
-}
 .irancast-first-advertisement .container .remaining-time .remaining-content div span {
     opacity: 0.7;
 }
@@ -1141,9 +1168,10 @@ ul{
     margin-bottom: 10px;
     margin-right: -1px;
 }
-.financial-support .financial-title div div{
+.financial-support .financial-title div div {
     display: flex;
     gap: 8px;
+    align-items: center;
 }
 .financial-support .financial-title div div i {
     padding: 11px 16px;
@@ -1213,6 +1241,11 @@ ul{
 .irancast-favorite .header h2{
 
 }
+.irancast-favorite .header .icon-title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
 .irancast-favorite .header h2 span{
     color: var(--maincolor);
 }
@@ -1229,12 +1262,15 @@ ul{
 .irancast-favorite .header p span{
     font-weight: bold;
 }
-.irancast-favorite .header a{
+.irancast-favorite .header>a{
     padding: 6px 15px;
     border-radius: 8px;
     background-color: var(--LightSections);
     border: var(--MainBorder);
     color: var(--DarkParagraphs);
+}
+.irancast-favorite .content .left-section>div>a{
+    display: none;
 }
 .irancast-favorite>.container>.content {
     display: flex;
@@ -1263,18 +1299,19 @@ ul{
     /* position: absolute; */
     /* z-index: -2; */
 }
-.irancast-favorite .content .left-section .header i{
+.irancast-favorite .content .left-section .header i {
     padding: 13px 14px;
     color: var(--LightParagraphs);
+    z-index: 2;
     background-color: var(--TenPercentWhite);
     border: var(--MainBorder);
     border-radius: 8px;
     position: relative;
 }
-.irancast-favorite .content .left-section .header i::after{
+.irancast-favorite .content .left-section .header i::after {
     content: "";
     position: absolute;
-    /*z-index: -1;*/
+    z-index: -1;
     top: 50%;
     right: 50%;
     box-shadow: 7px 8px 25px 15px var(--maincolor);
@@ -1367,6 +1404,9 @@ ul{
     right: 0;
     padding: 16px 40px;
     align-items: center;
+}
+.irancast-favorite .content .right-section svg.tablet{
+    display: none;
 }
 .irancast-favorite .content .right-section .content .texts {
     display: flex;
@@ -1573,6 +1613,9 @@ ul{
 /* irancast-premium section */
 .irancast-premium{
     margin: 91px 0px 0px 0px;
+}
+.irancast-premium svg.mobile {
+    display: none;
 }
 .irancast-premium .container {
     position: relative;
@@ -1819,6 +1862,11 @@ ul{
 .irancast-guest .container header h2{
 
 }
+.irancast-guest .container header .resp {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
 .irancast-guest .container header h2 span{
     color: var(--maincolor);
 }
@@ -1985,6 +2033,12 @@ ul{
 }
 .irancast-second-advertisement .content .each-card{
     position: relative;
+}
+.irancast-second-advertisement .content .each-card svg.mobile {
+    display: none;
+}
+.irancast-second-advertisement .content .each-card>svg{
+    width: 512px;
 }
 .irancast-second-advertisement .content .each-card>div {
     display: flex;
@@ -2703,6 +2757,9 @@ ul{
     width: 366px;
     margin-top: 16px;
 }
+
+/* footer styles: */
+
 footer.irancast-footer{
     margin: 189px 0px 0px 0px;
     width: 100%;
@@ -2712,6 +2769,52 @@ footer.irancast-footer .footer-top {
     position: relative;
     margin-bottom: -10px;
 }
+footer.irancast-footer .footer-top .footer-top-content {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer.irancast-footer .footer-top .footer-top-content .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer.irancast-footer .footer-top .footer-top-content .youtube {
+    display: flex;
+    min-width: 574px;
+    width: 37%;
+    padding: 24px 44px 24px 141px;
+    gap: 16px;
+    background-color: var(--maincolor);
+    border-radius: 0px 24px 24px 0px;
+    align-items: center;
+    /* transform: translateX(10px); */
+    position: relative;
+}
+footer.irancast-footer .footer-top .footer-top-content .youtube .youtube-section-color{
+    position: absolute;
+
+}
+footer.irancast-footer .footer-top .footer-top-content .youtube>div {
+    color: var(--LightParagraphs);
+}
+footer.irancast-footer .footer-top .footer-top-content .youtube>div p{
+    font-size: 24px;
+}
+footer.irancast-footer .footer-top .footer-top-content .youtube>div span{
+    opacity: 0.7;
+}
+footer.irancast-footer .footer-top .footer-top-content .youtube a {
+    padding: 8px 14px;
+    background: var(--TenPercentWhite);
+    border-radius: 8px;
+    border: var(--MainBorder);
+    color: var(--LightParagraphs);
+}
 footer.irancast-footer .footer-body {
     padding-top: 27px;
     background-color: var(--DarkShapes);
@@ -2720,6 +2823,10 @@ footer.irancast-footer .footer-body .copyright{
     color: var(--LightParagraphs);
     padding-bottom: 28px;
 }
+
+
+
+
 
 
 

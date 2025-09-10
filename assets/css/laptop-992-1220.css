@@ -1,0 +1,224 @@
+@media screen and (max-width: 1220px) {
+    .container{
+        width: 975px;
+        /*background-color: red;*/
+    }
+    .season-category .episodes .episodes-div .episodes-list .each-episode .dp-lp{
+        display: block;
+    }
+    .custom-player .play-pause {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .banner-content .custom-player {
+        width: 381px;
+        height: 70px;
+    }
+    .irancast-banner .banner-content .left-section-banner{
+        gap: 12px;
+    }
+    .irancast-banner .banner-content .right-section-banner::after{
+        padding: 170px;
+    }
+    .season-category .episodes .episodes-div {
+        padding: 10px 32px 22px 32px;
+        gap: 10px;
+    }
+    .season-category .episodes .episodes-div .episodes-list .each-episode {
+        padding: 5px 14px;
+    }
+    .season-category .seasons .subshape {
+        padding: 75px 32px 32px 32px;
+    }
+    .season-category .seasons .four-sesasons .each-season {
+        max-height: 65px;
+    }
+    .season-category .episodes>a {
+        width: 27.7%;
+    }
+
+    /* new-episodes section: */
+    .irancast-new-episodes .container .new-episodes-cards .each-card .content .desc {
+        padding: 3px 16px 60px;
+    }
+    .irancast-new-episodes .container .new-episodes-cards .each-card .content img {
+        width: 222px;
+        height: 123px;
+    }
+    .irancast-new-episodes .container .new-episodes-cards .each-card {
+        width: 235px;
+        height: 307px;
+    }
+    .irancast-new-episodes .container .new-episodes-cards .each-card .sub-shape2 {
+        height: 247px;
+    }
+
+    /* irancast-first-advertisement section: */
+    .irancast-first-advertisement .container .remaining-time .remaining-content img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+    .irancast-first-advertisement .container .remaining-time .remaining-content div {
+        margin-top: 15px;
+    }
+    .irancast-first-advertisement .container .remaining-time .remaining-title h3 {
+        font-size: 16px;
+    }
+    .irancast-first-advertisement .container .financial-support .financial-content {
+        bottom: 47px;
+    }
+    .financial-support .financial-title div div h3 {
+        font-size: 18px;
+    }
+
+    /* irancast-favorite section: */
+    .irancast-favorite .content .right-section .content {
+        display: flex;
+        gap: 16px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 7px 18px;
+        align-items: center;
+        overflow: hidden;
+    }
+    .irancast-favorite .content .right-section .content .texts {
+        gap: 5px;
+    }
+    .irancast-favorite .content .right-section .content .texts h3 {
+        font-size: 22px;
+    }
+    .irancast-favorite .content .left-section .left-content {
+        padding: 0px 32px 16px 32px;
+    }
+
+    /* irancast-subscribe section: */
+    .irancast-subscribe>.content .container {
+        flex-wrap: wrap;
+    }
+    .irancast-subscribe>.content .container .each-subscribe {
+        width: 32%;
+    }
+
+    /* irancast-premiu section: */
+    .irancast-premium .container .premium-cards .each-card .content .desc {
+        padding: 3px 16px 60px;
+    }
+    .irancast-premium .container .premium-cards .each-card .content img {
+        width: 222px;
+        height: 123px;
+    }
+    .irancast-premium .container .premium-cards .each-card {
+        width: 235px;
+        height: 307px;
+    }
+    .irancast-premium .container .premium-cards .each-card .sub-shape2 {
+        height: 247px;
+    }
+    .irancast-premium .container .premium-cards .each-card>i {
+        padding: 8px 7px 0px 7px;
+    }
+
+    /* irancast-second-advertisement section: */
+    .irancast-second-advertisement .content .each-card>svg {
+        width: 467px;
+    }
+    .irancast-second-advertisement .content .each-card>div .each-social-media {
+        width: 190px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* irancast-help section: */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .irancast-header .header-content-bottom .container>ul>li{
+        position: unset;
+    }
+    .irancast-header .header-content-bottom .container>ul{
+        position: relative;
+    }
+
+}

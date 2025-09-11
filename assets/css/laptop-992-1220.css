@@ -128,52 +128,82 @@
         width: 190px;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /* irancast-help section: */
+    .irancast-help {
+        margin: 60px 0px 0px 0px;
+    }
+
+    /* irancast-book section: */
+    .irancast-book .container .content .right-section .absolute-svg {
+        top: 100px;
+    }
+    .irancast-book .container .content .left-section .absolute-svg {
+        top: 100px;
+    }
+
+    /* irancast-read-more section: */
+    .irancast-read-more .container .read-more-cards .each-card .content .desc {
+        padding: 3px 16px 60px;
+    }
+    .irancast-read-more .container .read-more-cards .each-card .content img {
+        width: 222px;
+        height: 123px;
+    }
+    .irancast-read-more .container .read-more-cards .each-card {
+        width: 235px;
+        height: 307px;
+    }
+    .irancast-read-more .container .read-more-cards .each-card .sub-shape2 {
+        height: 247px;
+    }
+    .irancast-read-more .container .read-more-cards .each-card>i {
+        padding: 8px 7px 0px 7px;
+    }
+    .irancast-read-more .container .read-more-cards .each-card .content .desc {
+        padding: 3px 16px 30px;
+    }
+
+    /* irancast-faq section: */
+    .irancast-faq .container .content .each-faq {
+        width: 48%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

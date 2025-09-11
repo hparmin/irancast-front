@@ -1,6 +1,6 @@
 @media screen and (max-width: 992px) {
     .container{
-        background-color: greenyellow;
+        /*background-color: greenyellow;*/
         width: 740px;
     }
     .irancast-banner .banner-content .right-section-banner{
@@ -180,25 +180,77 @@
     }
 
     /* irancast-help section: */
+    .irancast-help .container .left-section .content {
+        padding: 18px 14px 22px 14px;
+    }
+    .irancast-help .container .right-section .content {
+        padding: 18px 14px 22px 14px;
+    }
+    .irancast-help .container .left-section .content>img{
+        display: none;
+    }
+    .irancast-help .container .right-section .content>img{
+        display: none;
+    }
 
+    /* irancast-book section: */
+    .irancast-book .container .content .right-section img {
+        left: -20px;
+        max-width: 35%;
+    }
+    .irancast-book .container .content .right-section .right-content {
+        width: 65%;
+        padding-right: 14px;
+        align-items: flex-start;
+    }
+    .irancast-book .container .content .right-section {
+        overflow: hidden;
+        border-radius: 24px;
+    }
+    .irancast-book .container .content .left-section {
+        overflow: hidden;
+        border-radius: 24px;
+    }
+    .irancast-book .container .content .left-section img {
+        left: -20px;
+        max-width: 35%;
+    }
+    .irancast-book .container .content .left-section .left-content {
+        width: 65%;
+        padding-right: 14px;
+        align-items: flex-start;
+    }
+    .irancast-book .container .content .left-section .absolute-svg {
+        top: 80px;
+    }
+    .irancast-book .container .content .right-section .absolute-svg {
+        top: 80px;
+    }
+    .irancast-book .container .content .left-section .left-content>a {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .irancast-book .container .content .right-section .right-content>a {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
 
+    /* irancast-read-more section: */
+    .irancast-read-more .container .read-more-cards {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .irancast-read-more .container .read-more-cards .each-card .content .desc svg {
+        top: 30px;
+    }
+    .irancast-read-more .container .read-more-cards .each-card .content .desc p.read-more-card-desc {
+        margin-top: 22px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /* irancast-faq section: */
+    .irancast-faq .container .content .each-faq {
+        width: 100%;
+    }
 
 
 

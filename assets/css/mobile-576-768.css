@@ -1,6 +1,6 @@
 @media screen and (max-width: 768px) {
     .container {
-        background-color: blue;
+        /*background-color: blue;*/
         width: 520px;
     }
     .irancast-banner .shape-parent .responsive-shape{
@@ -82,6 +82,7 @@
     .season-category .episodes>a {
         width: 37.7%;
         box-shadow: 1px 1px 7px 1px #0000001a;
+        z-index: 25;
     }
     .season-category .episodes .episodes-div {
         padding: 10px 14px 14px 14px;
@@ -265,6 +266,171 @@
     }
 
     /* irancast-help section: */
+    .irancast-help .container .left-section .content>img{
+        display: unset;
+    }
+    .irancast-help .container .right-section .content>img{
+        display: unset;
+    }
+    .irancast-help .container {
+        flex-direction: column;
+    }
+    .irancast-help .container .right-section {
+        width: 100%;
+    }
+    .irancast-help .container .left-section {
+        width: 100%;
+    }
+    .irancast-help .container .left-section .content>img {
+        margin-bottom: 10px;
+    }
+
+    /* irancast-book section: */
+    .irancast-book .container .content {
+        flex-direction: column;
+    }
+    .irancast-book .container .content .right-section {
+        width: 100%;
+    }
+    .irancast-book .container .content .left-section {
+        width: 100%;
+    }
+    .irancast-book .container .content .left-section .absolute-svg {
+        top: 110px;
+    }
+    .irancast-book .container .content .right-section .absolute-svg {
+        top: 110px;
+    }
+    .irancast-book .container .content .right-section .right-content {
+        padding-right: 35px;
+    }
+    .irancast-book .container .content .left-section .left-content {
+        padding-right: 35px;
+    }
+
+    /* irancast-read-more section: */
+    .irancast-read-more .container .read-more-cards .each-card .content .desc {
+        padding: 3px 16px 30px;
+    }
+    .irancast-read-more .container header a{
+        top: unset;
+        bottom: -58px;
+    }
+    .irancast-read-more .container header h2 {
+        font-size: 20px;
+    }
+    .irancast-read-more .container header .hor-line{
+        display: none;
+    }
+    .irancast-read-more .container .read-more-cards {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .irancast-read-more .container header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .irancast-read-more .container .read-more-cards {
+        margin-top: 0px;
+    }
+    .irancast-read-more{
+        position: relative;
+    }
+    .irancast-read-more .container .read-more-cards .each-card .content .desc svg {
+        top: 38px;
+    }
+
+    /* .irancast-comments section: */
+    .irancast-comments header{
+        overflow: hidden;
+        width: 100%;
+    }
+    .irancast-comments header>svg {
+        width: 120%;
+        margin-right: 50%;
+        transform: translateX(50%);
+    }
+    .irancast-comments header .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .irancast-comments .container {
+        margin-top: 26px;
+    }
+
+    /* irancast-faq section: */
+    .irancast-faq .container .content .faq-righ-svg {
+        right: unset;
+        left: 0;
+    }
+    .irancast-faq .container .content .faq-left-svg {
+        top: unset;
+        left: unset;
+        bottom: 0;
+        right: 0;
+    }
+    .irancast-faq .container .content {
+        position: relative;
+        padding: 26px 0px 0px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

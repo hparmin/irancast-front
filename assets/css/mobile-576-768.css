@@ -309,6 +309,12 @@
     }
 
     /* irancast-read-more section: */
+    .irancast-read-more .container>svg {
+        display: none;
+    }
+    .irancast-read-more>svg.responsive-svg {
+        display: unset;
+    }
     .irancast-read-more .container .read-more-cards .each-card .content .desc {
         padding: 3px 16px 30px;
     }
@@ -379,13 +385,24 @@
         align-items: flex-start;
     }
 
-
-
-
-
-
-
-
+    /* irancast-footer section: */
+    footer.irancast-footer .container .foote-bottom .newsletter {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    footer.irancast-footer .container .foote-bottom .newsletter>div>.hor-line{
+        display: unset;
+    }
+    footer.irancast-footer .container .foote-bottom .newsletter>div {
+        width: 100%;
+    }
+    footer.irancast-footer .container .foote-bottom .newsletter {
+        width: 100%;
+    }
+    footer.irancast-footer .container .footer-middle .all-new-episodes .all-new-ep-link {
+        direction: rtl;
+        width: 100%;
+    }
 
 
 

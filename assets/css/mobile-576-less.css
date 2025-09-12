@@ -1,6 +1,6 @@
 @media screen and (max-width: 576px) {
     .container {
-        background-color: yellow;
+        /*background-color: yellow;*/
         width: 322px;
     }
     .irancast-banner .banner-content{
@@ -74,7 +74,7 @@
     }
     .season-category .episodes>a {
         top: unset;
-        bottom: 0;
+        bottom: -8px;
         width: 42.7%;
         font-size: 16px;
     }
@@ -136,6 +136,11 @@
     }
     .irancast-first-advertisement .container .remaining-time, .irancast-first-advertisement .container .financial-support {
         padding-top: 140px;
+    }
+    .financial-support .financial-title div p {
+        opacity: 0.7;
+        font-weight: 300;
+        font-size: 14px;
     }
     .irancast-first-advertisement .container .remaining-time .remaining-content {
         bottom: 17px;
@@ -211,6 +216,12 @@
     /* irancast-favorite section: */
     .irancast-favorite {
         margin: 25px 0px 0px 0px;
+    }
+    .irancast-favorite .content .right-section .custom-player {
+        bottom: -33px;
+    }
+    .irancast-favorite>.container>.content {
+        gap: 56px;
     }
     .irancast-favorite .content .left-section>svg {
         display: none;
@@ -292,6 +303,16 @@
     .irancast-guest {
         margin: 22px 0px 0px 0px;
     }
+    .irancast-guest .container>a {
+        padding: 6px 15px;
+        border-radius: 8px;
+        background-color: var(--LightSections);
+        border: var(--MainBorder);
+        color: var(--DarkParagraphs);
+        margin-top: 16px;
+        display: inline-block;
+        float: left;
+    }
     .irancast-guest .container .content .each-card-guest {
         position: relative;
         background-color: var(--DarkShapes);
@@ -311,7 +332,7 @@
     }
     /* irancast-second-advertisement section: */
     .irancast-second-advertisement {
-        margin: 14px 0px 0px 0px;
+        margin: 42px 0px 0px 0px;
     }
     .irancast-second-advertisement .content .each-card svg.desktop{
         display: none;
@@ -340,6 +361,7 @@
     }
     .irancast-second-advertisement .content {
         gap: 8px;
+        margin-top: 16px;
     }
     /* irancast-help section: */
     .irancast-help {
@@ -489,6 +511,9 @@
     }
 
     /* irancast-read-more section: */
+    .irancast-read-more {
+        margin: 89px 0px 0px 0px;
+    }
     .irancast-read-more .container .read-more-cards .each-card {
         width: 100%;
         height: 380px;
@@ -520,6 +545,9 @@
     }
 
     /* irancast-comments section: */
+    .irancast-comments {
+        margin: 106px 0px 0px 0px;
+    }
     .irancast-comments .container .content {
         position: relative;
         padding: 0px 0px;
@@ -529,21 +557,51 @@
     }
 
     /* irancast-faq section: */
+    .irancast-faq {
+        margin: 107px 0px 0px 0px;
+    }
     .irancast-faq .container header{
         flex-direction: column;
         align-items: flex-start;
     }
+    .irancast-faq .container .content {
+        margin-top: 30px;
+    }
 
+    /* irancast-footer section: */
+    footer.irancast-footer .container .footer-top .content {
+        padding: 0px 0px 0px 5px;
+    }
+    footer.irancast-footer .container .footer-middle>div {
+        padding: 0px 0px 0px 0px;
+    }
+    footer.irancast-footer .container .footer-middle .title h3 {
+        font-size: 16px;
+    }
+    footer.irancast-footer .container .footer-middle .footer-licenses {
+        width: 25%;
+    }
+    footer.irancast-footer .container .footer-middle .force-links {
+        width: 25%;
+    }
+    footer.irancast-footer .container .footer-middle .about-us-footer .irancast-address {
+        padding: 0px 30px;
+    }
+    footer.irancast-footer .container .footer-middle .footer-social-media {
+        display: unset;
+        margin-right: unset;
+        margin-top: 25px;
+    }
+    footer.irancast-footer .container .foote-bottom .footer-social-media{
+        display: none;
+    }
+    footer.irancast-footer .container .footer-middle .about-us-footer {
+        align-items: flex-start;
+    }
 
-
-
-
-
-
-
-
-
-
+    footer.irancast-footer .container .foote-bottom .newsletter input[type="text"] {
+        width: 248px;
+    }
 
 
 

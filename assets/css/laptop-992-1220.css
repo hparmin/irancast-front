@@ -168,8 +168,14 @@
         width: 48%;
     }
 
-
-
+    /* irancast-footer section: */
+    footer.irancast-footer .container .footer-middle .footer-licenses .all-licenses {
+        justify-content: flex-end;
+    }
+    footer.irancast-footer .container .footer-middle .footer-licenses .all-licenses figure {
+        width: 153px;
+        height: 94px;
+    }
 
 
 

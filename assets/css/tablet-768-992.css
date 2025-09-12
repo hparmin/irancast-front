@@ -252,19 +252,47 @@
         width: 100%;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /* irancast-footer section: */
+    footer.irancast-footer .container .footer-middle>div {
+        min-width: 50%;
+    }
+    footer.irancast-footer .container .footer-middle {
+        flex-wrap: wrap;
+    }
+    footer.irancast-footer .container .footer-middle .footer-licenses .all-licenses {
+        justify-content: start;
+    }
+    footer.irancast-footer .container .footer-middle>div {
+        margin-top: 39px;
+        flex-grow: 1;
+    }
+    footer.irancast-footer .container .footer-middle .about-us-footer{
+        order: 1;
+    }
+    footer.irancast-footer .container .footer-middle .force-links{
+        order: 2;
+    }
+    footer.irancast-footer .container .footer-middle .footer-licenses{
+        order: 3;
+        width: 50%;
+    }
+    footer.irancast-footer .container .footer-middle .footer-new-episodes{
+        order: 4;
+        flex-grow: 1;
+    }
+    footer.irancast-footer .container .footer-middle .all-new-episodes {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    footer.irancast-footer .container .foote-bottom {
+        flex-wrap: wrap;
+    }
+    footer.irancast-footer .container .foote-bottom .newsletter {
+        margin-top: 20px;
+    }
+    footer.irancast-footer .container .foote-bottom .footer-social-media {
+        margin-right: -14px;
+    }
 
 
 

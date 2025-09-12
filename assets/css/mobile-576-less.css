@@ -3,6 +3,14 @@
         /*background-color: yellow;*/
         width: 322px;
     }
+
+
+    .irancast-header .header-content-top .container>ul.mobile {
+        width: 100%;
+        padding: 10px 40px;
+    }
+
+    /* irancast-banner section: */
     .irancast-banner .banner-content{
         padding: 0px 24px;
     }

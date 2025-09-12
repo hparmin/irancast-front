@@ -3,6 +3,32 @@
         /*background-color: greenyellow;*/
         width: 740px;
     }
+
+
+    /* irancast-header section: */
+    .irancast-header .header-content-bottom,
+    .irancast-header .header-content-top .left-top-header .buy-subscribe-div,
+    .irancast-header .header-content-top .left-top-header .user-account-div,
+    .irancast-header .header-content-top .logo-text p {
+        display: none;
+    }
+    .irancast-header .header-content-top>div .hamburgar-menu-div {
+        display: unset;
+    }
+    .irancast-header .header-content-top>div .hamburgar-menu-div i{
+        padding: 14px;
+        background-color: var(--TenPercentWhite);
+        border: var(--MainBorder);
+        border-radius: 8px;
+    }
+    .irancast-header .header-content-top .logo-text {
+        justify-content: center;
+    }
+    .irancast-header .header-between-sections-svg {
+        width: 100%;
+        display: none;
+    }
+    /* irancast-banner section: */
     .irancast-banner .banner-content .right-section-banner{
         width: 30%;
     }

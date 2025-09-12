@@ -3,6 +3,17 @@
         width: 975px;
         /*background-color: red;*/
     }
+
+    /* irancast-header section: */
+    .irancast-header .header-content-bottom .container>ul {
+        gap: 10px;
+    }
+    .irancast-header .header-content-bottom .container>ul>li>ul {
+        max-width: 955px;
+    }
+
+
+    /* season-category section: */
     .season-category .episodes .episodes-div .episodes-list .each-episode .dp-lp{
         display: block;
     }

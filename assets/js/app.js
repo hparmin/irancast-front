@@ -311,10 +311,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    // کد زیر باعث میشه تا اگر داخل تگ ال آی، یو ال بود، یک اسپن با کلاس فلش به انتهای تگ h2 اضافه بشه
+    const listItems = document.querySelectorAll("li");
+
+    listItems.forEach(li => {
+        const hasUL = li.querySelector("ul");
+        const h2 = li.querySelector("h2");
+
+        if (hasUL && h2) {
+            // اگر هنوز span اضافه نشده بود، اضافه کن
+            if (!h2.querySelector(".sub-menu-arrow")) {
+                const span = document.createElement("span");
+                span.className = "sub-menu-arrow fa-solid fa-angle-down";
+                h2.appendChild(span);
+            }
+        }
+    });
+
+    // کد زیر باعث باز و بسته شدن زیر منوی ها میشن:
+    $('.header-content-top a.has-submenu').click(function (e) {
+        e.preventDefault();
+        $(this).next("ul").slideToggle();
+        $(this).find('i').toggleClass('active');
+        // چرخش فلش منوی اصلی
+        $(this).find('.sub-menu-arrow').toggleClass('rotated');
+    });
+
+    $('.irancast-header .header-content-top .container>ul.mobile>li>ul li h2').click(function () {
+        $(this).next("div").slideToggle();
+        $(this).find('.sub-menu-arrow').toggleClass('rotated');
+    });
+});
 
 
-
-
+// کد زیر باعث باز شدن منوی همبرگری مشود:
+$(document).ready(function () {
+    $('.hamburgar-menu-div').click(function () {
+        $('.irancast-header .header-content-top .container>ul.mobile').toggleClass('menu-open');
+    });
+});
 
 
 

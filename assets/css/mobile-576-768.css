@@ -3,6 +3,17 @@
         /*background-color: blue;*/
         width: 520px;
     }
+
+    /* irancast-header section: */
+    .irancast-header {
+        position: relative;
+        min-height: 80px;
+         background: var(--SecondMaincolor);
+    }
+    .irancast-header>svg{
+        display: none;
+    }
+    /* irancast-banner section: */
     .irancast-banner .shape-parent .responsive-shape{
         display: unset;
     }

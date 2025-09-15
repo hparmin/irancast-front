@@ -192,7 +192,28 @@ $('#comment-slider').owlCarousel({
     navText: ['<span class="fa-solid fa-arrow-right"></span>', '<span class="fa-solid fa-arrow-left"></span>']
 })
 
-
+$('#comment-slider2').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    rtl: true,
+    responsiveRefreshRate: 100,
+    responsive: {
+        0: {
+            items: 1
+        },
+        768: {
+            items: 1
+        },
+        992: {
+            items: 3
+        },
+        1000: {
+            items: 3
+        }
+    },
+    navText: ['<span class="fa-solid fa-arrow-right"></span>', '<span class="fa-solid fa-arrow-left"></span>']
+})
 //کد های بخش faq:
 document.addEventListener('DOMContentLoaded', function() {
     const theHeadElements = document.querySelectorAll('.the-head');

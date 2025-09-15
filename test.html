@@ -3,182 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منوی همبرگری</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>گرید با خطوط محو شونده</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-
-
-        .main-menu {
-            position: fixed;
-            top: 0;
-            right: -402px; /* اول مخفی */
-            width: 402px;
-            height: 100vh;
-            background: #fff;
-            box-shadow: -4px 0 12px rgba(0,0,0,0.2);
-            padding: 20px;
-            overflow-y: auto;
-            transition: right 0.4s ease;
-            z-index: 1000;
-            flex-direction: column; /* برای چینش عمودی */
-        }
-
-        /* وقتی منو اکتیو میشه */
-        .main-menu.active {
-            right: 0;
-        }
-
-        /* لیست اصلی */
-        .main-menu > ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .main-menu > ul > li {
-            margin-bottom: 10px;
-        }
-
-        .main-menu > ul > li > a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px;
-            background: #f5f5f5;
-            border-radius: 6px;
-            text-decoration: none;
-            color: #333;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .main-menu > ul > li > a:hover {
-            background: #eaeaea;
-        }
-
-        /* زیر منوها */
-        .main-menu ul ul {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, opacity 0.4s ease;
-            opacity: 0;
-            margin: 0;
-            padding-left: 15px;
-        }
-
-        .main-menu ul li.open > ul {
-            max-height: 800px; /* مقدار زیاد برای باز شدن */
-            opacity: 1;
-        }
-
-        /* لینک‌های زیرمنو */
-        .main-menu ul ul li a {
-            display: block;
-            padding: 8px;
-            text-decoration: none;
-            color: #444;
-            border-radius: 4px;
-        }
-
-        .main-menu ul ul li a:hover {
-            background: #f0f0f0;
-        }
-
     </style>
 </head>
 <body>
-<div class="header-content-both">
-    <div class="header-content-top">
-        <div class="container flex align-center space-btw main-menu">
-            <div class="hamburgar-menu-div">
-                <i class="fa-classic fa-solid fa-bars"></i>
-            </div>
-            <ul>
-                <li><a href="#"><i class="fas fa-home"></i>صفحه اصلی</a></li>
-                <li>
-                    <a href="#"><i class="fas fa-play-circle"></i>اپیزود ها
-                        <span class="fa-solid fa-angle-down"></span>
-                    </a>
-                    <ul>
-                        <li><h2 href="#">بر اساس موضوع</h2>
-                            <div>
-                                <ul>
-                                    <li><a href="#">فصل اول</a></li>
-                                    <li><a href="#">فصل دوم</a></li>
-                                    <li><a href="#">فصل سوم</a></li>
-                                    <li><a href="#">فصل چهارم</a></li>
-                                    <li><a href="#">فصل پنجم</a></li>
-                                    <li><a href="#">فصل ششم</a></li>
-                                </ul>
-                                <a href="#">همه فصل ها</a>
-                            </div>
-                        </li>
-                        <li><h2>بر اساس سال</h2>
-                            <div>
-                                <ul>
-                                    <li><a href="#">2023</a></li>
-                                    <li><a href="#">2022</a></li>
-                                    <li><a href="#">2021</a></li>
-                                    <li><a href="#">2020</a></li>
-                                    <li><a href="#">2019</a></li>
-                                    <li><a href="#">2018</a></li>
-                                </ul>
-                                <a href="#">همه سال ها</a>
-                            </div>
-                        </li>
-                        <li><h2>پربازدیدترین</h2>
-                            <div>
-                                <ul>
-                                    <li><a href="#">اپیزود اول</a></li>
-                                    <li><a href="#">اپیزود دوم</a></li>
-                                    <li><a href="#">اپیزود سوم</a></li>
-                                    <li><a href="#">اپیزود چهارم</a></li>
-                                </ul>
-                                <a href="#">همه اپیزودها</a>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#"><i class="fas fa-newspaper"></i>مقالات</a></li>
-                <li><a href="#"><i class="fas fa-info-circle"></i>درباره ما</a></li>
-                <li><a href="#"><i class="fas fa-phone"></i>تماس با ما</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const menuBtn = document.querySelector(".hamburgar-menu-div");
-        const mainMenu = document.querySelector(".main-menu");
+<!-- svg whith clipPath: -->
 
-        // باز و بسته کردن منوی همبرگری
-        menuBtn.addEventListener("click", () => {
-            mainMenu.classList.toggle("active");
-        });
+<svg width="0" height="0" viewBox="0 0 1 1" aria-hidden="true" focusable="false">
+    <defs>
+        <clipPath id="single-blog-main-picture" clipPathUnits="objectBoundingBox">
+            <path transform="matrix(0.001126126126126126 0 0 0.002375296912114014 0 0)"
+                  d="M888 24C888 10.7452 877.255 0 864 0H24C10.7452 0 0 10.7452 0 24V397C0 410.255 10.7452 421 24 421H153.521C162.039 421 169.92 416.484 174.227 409.134L209.547 348.864C213.854 341.514 221.734 336.999 230.253 336.999H864C877.255 336.999 888 326.253 888 312.999V24Z"/>
+        </clipPath>
+    </defs>
+</svg>
+<img src="assets/images/cls.jpg" alt=""
+     style="clip-path: url(#single-blog-main-picture); -webkit-clip-path: url(#single-blog-main-picture);">                <div class="details"></div>
 
-        // مدیریت زیرمنوها
-        const menuParents = document.querySelectorAll(".main-menu > ul > li");
 
-        menuParents.forEach((parent) => {
-            const submenu = parent.querySelector("ul");
-            const link = parent.querySelector("a");
+<!-- svg whith mask: -->
+<svg viewBox="0 0 888 421" preserveAspectRatio="xMidYMid meet">
+    <defs>
+        <mask id="image-mask">
+            <path fill="white" d="M888 24C888 10.7452 877.255 0 864 0H24C10.7452 0 0 10.7452 0 24V397C0 410.255 10.7452 421 24 421H153.521C162.039 421 169.92 416.484 174.227 409.134L209.547 348.864C213.854 341.514 221.734 336.999 230.253 336.999H864C877.255 336.999 888 326.253 888 312.999V24Z"/>
+        </mask>
+    </defs>
+    <image width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xlink:href="assets/images/cls.jpg" mask="url(#image-mask)"/>
+</svg>
 
-            if (submenu) {
-                link.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    parent.classList.toggle("open");
-                });
-            }
-        });
-    });
-
-</script>
 </body>
 </html>

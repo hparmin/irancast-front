@@ -192,10 +192,19 @@
     }
 
 
+    /* irancast-about-us section: */
+    .irancast-about-us .container>svg.background-svg {
+        width: 1086px;
+    }
+    .irancast-about-us .container .content {
+        padding-top: 0px;
+    }
 
-
-
-
+    .irancast-about-us .container img.about-us-img {
+        bottom: 10px;
+        left: 152px;
+        max-width: 452px;
+    }
 
 
 

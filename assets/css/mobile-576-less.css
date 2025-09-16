@@ -617,8 +617,13 @@
         width: 248px;
     }
 
+    .irancast-about-us .container img.about-us-img {
+        max-height: 397px;
+    }
 
-
+    .irancast-about-us .container .content .right-section .desc {
+        -webkit-line-clamp: 7;
+    }
 
 
 

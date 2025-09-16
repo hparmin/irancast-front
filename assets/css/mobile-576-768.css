@@ -424,13 +424,31 @@
         width: 100%;
     }
 
-
-
-
-
-
-
-
+    /* irancast-about-us section: */
+    .irancast-about-us .container>svg.mobile{
+        display: unset;
+    }
+    .irancast-about-us .container>svg.desktop{
+        display: none;
+    }
+    .irancast-about-us .container .content {
+        flex-direction: column;
+    }
+    .irancast-about-us .container>svg.background-svg{
+        width: 100%;
+        margin-right: 0px;
+    }
+    .irancast-about-us .container .content {
+        padding: 24px;
+        gap: 35px;
+    }
+    .irancast-about-us .container img.about-us-img {
+        position: unset;
+        max-width: 100%;
+    }
+    .irancast-about-us .container .content .right-section .desc {
+        -webkit-line-clamp: 20;
+    }
 
 
 

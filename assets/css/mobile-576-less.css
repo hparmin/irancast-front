@@ -577,8 +577,14 @@
     }
 
     /* irancast-footer section: */
+    footer.irancast-footer .container .footer-top .content figure {
+        width: 50%;
+    }
     footer.irancast-footer .container .footer-top .content {
-        padding: 0px 0px 0px 5px;
+        padding: 20px 0px 0px 5px;
+    }
+    footer.irancast-footer .container .footer-middle>div {
+        margin-top: 0px;
     }
     footer.irancast-footer .container .footer-middle>div {
         padding: 0px 0px 0px 0px;

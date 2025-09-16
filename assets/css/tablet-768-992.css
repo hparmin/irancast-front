@@ -209,6 +209,9 @@
     .irancast-help .container .left-section .content {
         padding: 18px 14px 22px 14px;
     }
+    .irancast-help .container .left-section .content img {
+        margin-bottom: -10px;
+    }
     .irancast-help .container .right-section .content {
         padding: 18px 14px 22px 14px;
     }

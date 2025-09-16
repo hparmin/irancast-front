@@ -397,6 +397,15 @@
     }
 
     /* irancast-footer section: */
+    footer.irancast-footer .container .footer-top svg.mobile{
+        display: unset;
+    }
+    footer.irancast-footer .container .footer-top .content figure {
+        width: 40%;
+    }
+    footer.irancast-footer .container .footer-top svg.desktop{
+        display: none;
+    }
     footer.irancast-footer .container .foote-bottom .newsletter {
         align-items: flex-start;
         flex-direction: column;

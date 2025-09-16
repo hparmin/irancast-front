@@ -5,6 +5,9 @@
     }
 
     /* irancast-header section: */
+    .irancast-help .container .left-section .content img {
+        margin-bottom: 17px;
+    }
     .irancast-header .header-content-bottom .container>ul {
         gap: 10px;
     }

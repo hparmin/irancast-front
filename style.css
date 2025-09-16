@@ -55,6 +55,13 @@ a{
     align-items: center;
 }
 
+/* positions: */
+.relative{
+    position: relative;
+}
+.abolute{
+    position: absolute;
+}
 /* lines: */
 .vertical-lines {
     background-image: repeating-linear-gradient(
@@ -153,7 +160,8 @@ a{
 .irancast-read-more .container>svg path,
 .irancast-faq .container .content .faq-left-svg,
 footer.irancast-footer .footer-top>svg path,
-.irancast-read-more svg.responsive-svg
+.irancast-read-more svg.responsive-svg,
+.sigle-episode-links .container>svg path
 {
     fill: var(--SecondMaincolor);
 }
@@ -166,7 +174,10 @@ footer.irancast-footer .footer-top>svg path,
 .irancast-help .right-section svg path:nth-child(2),
 .irancast-subscribe .each-subscribe .light-shape-bg path:nth-child(2),
 .irancast-second-advertisement .content .each-card>svg path:nth-child(2),
-.archive-page .container .archive-side>svg path:nth-child(2)
+.archive-page .container .archive-side>svg path:nth-child(2),
+.single-episode-banner .container>svg path,
+.single-comment .leave-comment>svg path:nth-child(2),
+.irancast-login .corner-shape path
 {
     fill: var(--LightShapes);
 }
@@ -178,7 +189,7 @@ footer.irancast-footer .footer-top>svg path,
 .irancast-premium .container>svg path,
 .irancast-comments header>svg>path,
 .irancast-faq .container .content .faq-righ-svg,
-.irancast-login .left-login svg path,
+.irancast-login .left-login .login-shape path,
 .archive-page .single-content .single-blog-main-image .details-shape path
 {
     fill: var(--maincolor);
@@ -3021,7 +3032,7 @@ ul{
 .irancast-faq .container .content .each-faq {
     width: 49%;
     padding: 17px 16px 16px 0;
-    background-color: #f5f5f5;
+    background-color: var(--LightShapes);
     border-radius: 16px;
     position: relative;
     transition: all 0.2s ease-in-out;
@@ -3068,7 +3079,7 @@ ul{
 
 /* footer styles: */
 footer.irancast-footer {
-    margin: 186px 0px 0px 0px;
+    margin: 124px 0px 0px 0px;
     width: 100%;
     position: relative;
 }
@@ -3079,6 +3090,15 @@ footer.irancast-footer .container .footer-top .footer-top-svg {
     top: 0;
     right: 0;
     z-index: -1;
+}
+footer.irancast-footer .container .footer-top svg.mobile{
+    display: none;
+}
+@media screen and (min-width: 1720px) {
+    /* برای خارج نشدن لوگو از فوتر در اسکرین های خیلی بزرگ کد زیر رو نوشتم */
+    footer.irancast-footer {
+        background-color: var(--SecondMaincolor);
+    }
 }
 footer.irancast-footer .container .footer-top .content {
     width: 100%;
@@ -3376,7 +3396,8 @@ footer.irancast-footer .container .irancast-copy-right p{
     width: 288px;
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: sticky;
+    top: 60px;
 }
 .archive-page .archive-content{
     width: 896px;
@@ -3594,8 +3615,6 @@ footer.irancast-footer .container .irancast-copy-right p{
     position: relative;
     height: 421px;
     margin: auto;
-    background: var(--LightShapes);
-    background-color: var(--LightParagraphs);
     border-radius: 24px 24px 0 0;
 }
 
@@ -3608,11 +3627,20 @@ footer.irancast-footer .container .irancast-copy-right p{
     margin: auto;
 }
 .archive-page .single-content .body {
-    padding: 24px;
-    background: var(--LightParagraphs);
+    padding: 24px 24px 0 24px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: -140px;
+}
+.archive-page .single-content .body .sub-body {
+    padding: 24px;
+    background: var(--LightParagraphs);
+    padding-top: 150px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 .archive-page .single-content .body>p{
     width: 100%;
@@ -3643,7 +3671,6 @@ footer.irancast-footer .container .irancast-copy-right p{
 .archive-page .single-content .single-sections .header h2{
     font-size: 18px;
 }
-
 .archive-page .single-content .single-blog-main-image{
 
 }
@@ -3743,8 +3770,16 @@ footer.irancast-footer .container .irancast-copy-right p{
     width: 50%;
     position: relative;
 }
-.irancast-login{
+.irancast-login {
     display: flex;
+    margin: 50px auto;
+    justify-content: space-between;
+}
+.irancast-login .corner-shape {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 248px;
 }
 .login-container .left-login img {
     position: absolute;
@@ -3752,20 +3787,425 @@ footer.irancast-footer .container .irancast-copy-right p{
     left: 99px;
 }
 /* single-episode-banner section: */
+.single-episode-banner{
+    margin-top: 32px;
+}
+.single-episode-banner .container{
+    position: relative;
+    padding-right: 81px;
+}
+.single-episode-banner .container .content{
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 24px 0;
+    gap: 24px;
+}
+.single-episode-banner .container .content .right-section{
+    width: 405px;
+}
+.single-episode-banner .container .content .left-section {
+    width: 771px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.single-episode-banner .container .content .left-section .details{
+    display: flex;
+    gap: 24px;
+    padding-left: 24px;
+}
+.single-episode-banner .container .content .left-section .details .detail {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.single-episode-banner .container .content .left-section .details .detail i{
+    color: var(--maincolor);
+}
+.single-episode-banner .container .content .left-section .details .detail span{
+    color: var(--DarkParagraphs);
+    opacity: 0.7;
+}
+.single-episode-banner .container .content .left-section .count-guest p{
+    font-weight: bold;
+}
+.single-episode-banner .container .content .left-section>svg{
 
+}
+.single-episode-banner .container .content .left-section h1 {
+    color: var(--maincolor);
+    font-size: 28px;
+}
+.single-episode-banner .container .content .left-section .bottom-details{
+    display: flex;
+    padding-left: 24px;
+    flex-direction: column;
+}
+.single-episode-banner .container .content .left-section .bottom-details span{
+    opacity: 0.4;
+}
+.single-episode-banner .container .content .left-section .bottom-details .player-div-dark {
+    width: 100%;
+    min-height: 160px;
+    background-color: var(--SecondMaincolor);
+    border-radius: 24px;
+    margin-top: 20px;
+    box-shadow: 0px 18px 32px -13px var(--SecondMaincolor);
+}
+.sigle-episode-links{
+    margin-top: 56px;
+}
+.sigle-episode-links .container{
+    position: relative;
+}
+.sigle-episode-links .container .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 66px;
+    align-items: center;
+}
+.sigle-episode-links .container .content .each-link {
+    display: flex;
+    gap: 8px;
+    opacity: 0.5;
+    color: var(--LightParagraphs);
+    align-items: center;
+}
+.sigle-episode-links .container .content a.active,
+.sigle-episode-links .container .content .each-link:hover{
+    opacity: 1;
+}
+.sigle-episode-links .container .content .each-link i{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ffffff00;
+    transition: all 0.2s ease-in-out;
+}
+.sigle-episode-links .container .content a.active i,
+.sigle-episode-links .container .content .each-link:hover i{
+    background-color: var(--maincolor);
+    border: var(--MainBorder);
+}
+.sigle-episode-links .container .content .each-link span{
 
+}
+.single-episode-content {
+    margin-top: 72px;
+}
+.single-episode-content .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.single-episode-content .single-episode-body {
+    width: 888px;
+    min-height: 50px;
+}
+.single-episode-content .single-episode-body .about {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 26px;
+}
+.single-episode-content .single-episode-body .about::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 90px;
+    height: 0;
+    width: 0;
+    box-shadow: 8px 3px 167px 64px #ffffffa1;
+    z-index: -3;
+}
+.single-episode-content .single-episode-body .about .header {
+    display: flex;
+    padding: 16px 24px;
+    width: 780px;
+    color: var(--LightParagraphs);
+    align-items: center;
+    gap: 8px;
+}
+.single-episode-content .single-episode-body .about .header span{
+    font-size: 14px;
+    opacity: 0.7;
+}
+.single-episode-content .single-episode-body .about .header i{
+    background-color: var(--TenPercentWhite);
+    border-radius: 8px;
+    border: var(--MainBorder);
+    padding: 10px;
+}
+.single-episode-content .single-episode-body .about .desc{
+    background-color: var(--LightSections);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.single-episode-content .single-episode-body .about .desc>p{
+    opacity: 0.6;
+}
+.single-episode-content .single-episode-body .about .desc img {
+    float: right;
+    margin-left: 8px;
+    max-width: 64px;
+    max-height: 64px;
+}
+.single-episode-content .single-episode-body .about .desc h3{
 
+}
+.single-episode-content .single-episode-body .about .desc span {
+    opacity: 0.7;
+    color: var(--maincolor);
+    font-weight: 500;
+    font-size: 14px;
+}
+.single-episode-content .single-episode-body .about h2{
+    font-size: 24px;
+    margin-left: 8px;
+}
+.single-episode-content .single-episode-body .about .header .hor-line{
+    background-color: var(--TenPercentWhite);
+}
+.single-episode-content .single-episode-body .about>svg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -5;
+}
+.single-episode-content .single-episode-sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 288px;
+    /* position: relative; */
+    position: sticky;
+    top: 60px;
+}
+.single-episode-content .single-episode-sidebar .content {
+    width: 100%;
+    background-color: var(--LightSections);
+    display: flex;
+    flex-direction: column;
+    gap: 16.5px;
+    padding: 104px 34px 0px 34px;
+    border-radius: 24px 24px 0 0;
+    margin-bottom: -25px;
+    z-index: 5;
+}
+.single-episode-content .single-episode-sidebar .content>a {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    background-color: var(--LightShapes);
+    border-right: 16px;
+    border-radius: 16px;
+    gap: 16px;
+    min-height: 51px;
+}
+.single-episode-content .single-episode-sidebar .content>a:hover{
+    background-color: var(--maincolor);
+}
+.single-episode-content .single-episode-sidebar .content>a:hover i{
+    background-color: var(--TenPercentWhite);
+}
+.single-episode-content .single-episode-sidebar>svg path:nth-child(2){
+    fill: var(--LightSections);
+}
+.single-episode-content .single-episode-sidebar .content>a i{
+    background-color: var(--maincolor);
+    border: var(--MainBorder);
+    border-radius: 12px;
+    color: var(--LightParagraphs);
+    padding: 9px 11px;
+    transition: all 0.2s ease-in-out;
+}
+.single-episode-content .single-episode-sidebar .content>a span{
+    color: var(--DarkParagraphs);
+}
+.single-episode-content .single-episode-sidebar .title {
+    position: absolute;
+    width: 272px;
+    top: -24px;
+    background-color: var(--SecondMaincolor);
+    padding: 24px 14px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: auto;
+    border-radius: 16px;
+    margin-right: 8px;
+    color: var(--LightParagraphs);
+    z-index: 10;
+    box-shadow: 0px 16px 43px -12px black;
+}
+.single-episode-content .single-episode-sidebar .title>i {
+    color: var(--LightParagraphs);
+    background-color: var(--TenPercentWhite);
+    border-right: 8px;
+    border: var(--MainBorder);
+    padding: 10px;
+    border-radius: 8px;
+}
+.single-episode-content .single-episode-sidebar .title h2{
 
+}
+.single-episode-content .single-episode-sidebar .title h2 span{
+    color: var(--maincolor);
+}
+.archive-page .single-content .single-comment {
+    padding: 24px 7px 0 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 85px;
+}
+.archive-page .single-content .single-comment .content>.title{
+    position: absolute;
+    right: -95px;
+    top: -52px;
+    width: 393px;
+    background-color: var(--SecondMaincolor);
+    padding: 24px 127px 24px 96px;
+    display: flex;
+    gap: 16px;
+    border-radius: 16px;
+}
+.archive-page .single-content .single-comment .content>.title i{
+    border-radius: 8px;
+    border: var(--MainBorder);
+    padding: 12px;
+    color: var(--LightParagraphs);
+    background-color: var(--TenPercentWhite);
+    position: relative;
+    z-index: 40;
+}
+.archive-page .single-content .single-comment .content>.title i::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    right: 50%;
+    box-shadow: 7px 8px 30px 18px var(--maincolor);
+}
+.archive-page .single-content .single-comment .content>.title h3{
+    font-size: 24px;
+    color: var(--LightParagraphs);
+}
+.archive-page .single-content .single-comment .content>.title h3 span{
+    color: var(--maincolor);
+}
+.archive-page .single-content .single-comment .content {
+    padding: 68px 32px 24px 32px;
+    background: var(--LightParagraphs);
+    border-radius: 16px;
+}
+.archive-page .single-comment .each-comment{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 24px;
+    background-color: var(--LightShapes);
+}
+.single-comment .each-comment .comment-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.single-comment .each-comment .comment-title .pic-name img{
+    float: right;
+    margin-left: 8px;
+    max-width: 64px;
+    max-height: 64px;
+}
+.single-comment .each-comment .comment-title .pic-name {
+    display: flex;
+    align-items: center;
+}
+.single-comment .each-comment .comment-title .pic-name span{
+    opacity: 0.7;
+    color: var(--maincolor);
+    font-weight: 500;
+    font-size: 14px;
+}
+.single-comment .each-comment .comment-title>i{
+    color: red;
+    padding: 10px;
+    border: 1px solid #0000001a;
+    border-radius: 8px;
+}
+.single-comment .each-comment .comment-text{
+    padding: 16px 24px;
+    background-color: var(--SecondMaincolor);
+    border-radius: 16px;
+    position: relative;
+}
+.single-comment .each-comment .comment-text svg.bottom{
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    color: var(--LightParagraphs);
+}
+.single-comment .each-comment .comment-text svg.top{
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: var(--LightParagraphs);
+}
+.single-comment .each-comment .comment-text p{
+    color: var(--LightParagraphs);
+    opacity: 0.7;
+}
+.single-comment .leave-comment{
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    margin-top: 24px;
+}
+.single-comment .leave-comment .form-section{
+    background-color: var(--LightShapes);
+    border-radius: 24px 24px 0 0;
+    padding: 31px 40px;
+}
+.single-comment .leave-comment .form-section .title{
+    display: flex;
+    gap: 8px;
+}
+.single-comment .leave-comment .form-section .title i{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--TenPercentBlack);
+    border: 1px solid #0000001a;
+    color: var(--maincolor);
+    position: relative;
 
-
-
-
-
-
-
-
-
-
+    border: var(--MainBorder);
+    z-index: 40;
+}
+.single-comment .leave-comment .form-section .title i::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    right: 50%;
+}
+.single-comment .leave-comment .form-section .title h3{
+    font-weight: bold;
+}
+.single-comment .leave-comment .form-section .title h3 span{
+    color: var(--maincolor);
+}
 
 
 

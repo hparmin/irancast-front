@@ -193,7 +193,8 @@ footer.irancast-footer .footer-top>svg path,
 .irancast-faq .container .content .faq-righ-svg,
 .irancast-login .left-login .login-shape path,
 .archive-page .single-content .single-blog-main-image .details-shape path,
-.iarncast-dashboard .container .dashboard-sidebar .title .title-svg path
+.iarncast-dashboard .container .dashboard-sidebar .title .title-svg path,
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>.title svg path
 {
     fill: var(--maincolor);
 }
@@ -2740,7 +2741,7 @@ ul{
     border-radius: 8px 0px 0px 8px;
     position: absolute;
     right: 0px;
-    top: 9px;
+    top: 5px;
 }
 .irancast-read-more .container .read-more-cards .each-card .content .desc .time,
 .archive-page .archive-content .all-posts-sec .each-card .content .desc .time {
@@ -4390,13 +4391,13 @@ footer.irancast-footer .container .irancast-copy-right p{
 .iarncast-dashboard .container .dashboard-content{
     width: 853px;
 }
-.iarncast-dashboard .container .dashboard-content .title {
+.iarncast-dashboard .container .dashboard-content>.title {
     position: relative;
     width: 100%;
     margin-right: -22px;
     z-index: -1;
 }
-.iarncast-dashboard .container .dashboard-content .title .title-content {
+.iarncast-dashboard .container .dashboard-content>.title .title-content {
     position: absolute;
     top: 0;
     bottom: 77px;
@@ -4407,21 +4408,22 @@ footer.irancast-footer .container .irancast-copy-right p{
     align-items: center;
     padding-right: 34px;
 }
-.iarncast-dashboard .container .dashboard-content .title .title-content i{
+.iarncast-dashboard .container .dashboard-content>.title .title-content i {
     background-color: var(--TenPercentWhite);
     border: var(--MainBorder);
     border-radius: 8px;
     color: var(--LightParagraphs);
     padding: 10px;
+    display: flex;
 }
-.iarncast-dashboard .container .dashboard-content .title .title-content h2{
+.iarncast-dashboard .container .dashboard-content>.title .title-content h2{
     font-size: 24px;
     color: var(--LightParagraphs);
 }
-.iarncast-dashboard .container .dashboard-content .title .title-content h2 span{
+.iarncast-dashboard .container .dashboard-content>.title .title-content h2 span{
     color: var(--maincolor);
 }
-.iarncast-dashboard .container .dashboard-content .title .title-content .hor-line{
+.iarncast-dashboard .container .dashboard-content>.title .title-content .hor-line{
     background-color: var(--TenPercentWhite);
 }
 .iarncast-dashboard .container .dashboard-content .content {
@@ -4633,6 +4635,115 @@ footer.irancast-footer .container .irancast-copy-right p{
     color: var(--LightParagraphs);
     border-radius: 12px;
     padding: 5px 24px;
+}
+
+/* fav-page: */
+.dashboard-content .fav-page .dash-con .fav-content{
+    padding: 0px !important;
+    border-radius: 0px !important;
+    background-color: var(--LightSections) !important;
+}
+
+/* my-subscribe page: */
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe{
+    margin-top: 58px;
+    position: relative;
+    width: 100%;
+}
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>svg path{
+    fill: var(--SiteBackgroundColor);
+}
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>.title{
+    position: absolute;
+    top: -40px;
+    right: 16px;
+    width: 363px;
+}
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>.title .title-content{
+    position: relative;
+}
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>.title .title-content div i {
+    background-color: var(--TenPercentWhite);
+    border: var(--MainBorder);
+    border-radius: 18px;
+    color: var(--LightParagraphs);
+    padding: 16px 14px 14px 14px;
+    font-size: 27px;
+}
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>.title .title-content>div {
+    display: flex;
+    gap: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 24px;
+    align-items: center;
+}
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>.title .title-content>div>span{
+    color: var(--DarkParagraphs);
+    font-size: 14px;
+}
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>.title .title-content>div p {
+    color: var(--LightParagraphs);
+    font-size: 18px;
+    font-weight: bold;
+}
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>.title .title-content>div p span{
+    color: var(--DarkParagraphs);
+    font-size: 14px;
+    font-weight: bold;
+}
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>.active-light{
+    position: absolute;
+    top: 24px;
+    left: 24px;
+}
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>.active-light p{
+    font-size: 14px;
+    color: var(--maincolor);
+    position: relative;
+}
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>.active-light p::after {
+    content: "";
+    position: absolute;
+    right: -14px;
+    padding: 4px;
+    background-color: var(--maincolor);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: 1px solid var(--maincolor);
+    border: 1px solid var(--SiteBackgroundColor);
+}
+.iarncast-dashboard .container .dashboard-content .content .my-subscribe>a.renewal {
+    position: absolute;
+    bottom: 18px;
+    left: 24px;
+    background-color: var(--maincolor);
+    text-align: center;
+    padding: 14px 0;
+    width: 363px;
+    color: var(--LightParagraphs);
+    border-radius: 12px;
+    text-shadow: 0px 0px 20px var(--LightParagraphs);
+}
+.dashboard-content .content .my-subscribe .my-subscribe-content {
+    position: absolute;
+    top: 109px;
+    padding: 0 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+}
+.dashboard-content .content .my-subscribe .my-subscribe-content>div{
+    padding: 6px 16px;
+    width: 48%;
+    border-radius: 8px;
+    background-color: var(--LightShapes);
+}
+.dashboard-content .content .my-subscribe .my-subscribe-content>div span{
+    color: var(--maincolor);
 }
 
 

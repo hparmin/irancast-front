@@ -206,8 +206,17 @@
         max-width: 452px;
     }
 
-
-
+    /* archive episode page: */
+    .archive-page .archive-content .archive-sort-sec {
+        gap: 20px;
+    }
+    .archive-page .archive-content .archive-sort-sec div span {
+        margin-left: 16px;
+        font-size: 14px;
+    }
+    .archive-page .archive-content {
+        width: 670px;
+    }
 
 
 

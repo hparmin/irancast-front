@@ -345,6 +345,33 @@
     }
 
     /* archive episode page: */
+    .archive-page .archive-side {
+        position: fixed;
+        right: 0;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+        z-index: 40;
+        top: 160px;
+    }
+    .archive-page .archive-side.open {
+        transform: translateX(0);
+    }
+
+    .archive-page .archive-side>.handle{
+        display: unset;
+    }
+    .archive-page .archive-content {
+        width: 100%;
+    }
+    .archive-page .container {
+        margin: 27px auto 0 auto;
+    }
+    .archive-page .archive-side .rest-side{
+        overflow: auto;
+        max-height: 75vh;
+        margin-top: -2px;
+        direction: ltr;
+    }
 
 
 

@@ -230,6 +230,7 @@ footer.irancast-footer .footer-top>svg path,
     color: var(--LightParagraphs);
     width: 500px;
     transition: all 0.2s ease-in-out;
+    margin-top: -5px;
 }
 
 .irancast-header .header-content-top .container>ul.mobile::-webkit-scrollbar{
@@ -509,8 +510,6 @@ footer.irancast-footer .footer-top>svg path,
     opacity: 0.7;
 }
 /* bottom header section: */
-
-
 .irancast-header .header-content-bottom{
     width: 100%;
     height: 45%;
@@ -1895,8 +1894,8 @@ ul{
     width: 100%;
     box-shadow: 19px 10px 141px 25px var(--DarkShapes);
     z-index: -1;
-    transition: all 0.2s ease-in-out;
     opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
 .irancast-premium .container .premium-cards .each-card:hover::after,
 .archive-content .all-episodes-sec .each-card:hover::after{
@@ -2673,6 +2672,9 @@ ul{
     transition: all 0.2s ease-in-out;
     opacity: 0;
 }
+.archive-page{
+    position: relative;
+}
 .irancast-read-more .container .read-more-cards .each-card:hover::after,
 .archive-page .archive-content .all-posts-sec .each-card:hover::after{
     opacity: 1;
@@ -3108,7 +3110,7 @@ footer.irancast-footer .footer-background {
     background-color: var(--SecondMaincolor);
     position: relative;
     z-index: 5;
-    margin-top: -5px;
+    margin-top: -10px;
     padding-top: 50px;
 }
 footer.irancast-footer .footer-background .left-vector {
@@ -3351,8 +3353,28 @@ footer.irancast-footer .container .irancast-copy-right p{
     width: 288px;
     display: flex;
     flex-direction: column;
-    position: sticky;
-    top: 60px;
+    position: relative;
+    /*position: sticky;*/
+    /* top: 60px; */
+}
+.archive-page .archive-side>.handle {
+    left: -37px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--maincolor);
+    border-radius: 14px 0 0 14px;
+    padding: 14px;
+    position: absolute;
+    z-index: 112;
+    cursor: pointer;
+    display: none;
+    color: var(--LightParagraphs);
+}
+.archive-page .archive-side>.handle i{
+    transition: all 0.3s ease-in-out;
+}
+.archive-page .open>.handle i{
+    transform: rotate(180deg);
 }
 .archive-page .archive-content{
     width: 896px;
@@ -3402,6 +3424,20 @@ footer.irancast-footer .container .irancast-copy-right p{
     flex-direction: column;
     gap: 12px;
     margin-top: -1px;
+    position: relative;
+}
+
+.archive-page .archive-side .rest-side::-webkit-scrollbar {
+    width: 5px;
+}
+.archive-page .archive-side .rest-side::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+.archive-page .archive-side .rest-side::-webkit-scrollbar-thumb{
+    background: var(--maincolor);
+    border-radius: 10px;
+    opacity: 0.5;
 }
 .archive-page .archive-side .rest-side>button {
     background-color: #f0f0f0;
@@ -3445,6 +3481,7 @@ footer.irancast-footer .container .irancast-copy-right p{
     top: -27px;
     right: 16px;
     align-items: center;
+    z-index: 5;
 }
 .archive-page .archive-side .rest-side-blog {
     padding-top: 33px;
@@ -3478,31 +3515,79 @@ footer.irancast-footer .container .irancast-copy-right p{
     display: flex;
     flex-direction: column;
     gap: 12px;
+    direction: rtl;
 }
 .archive-page .archive-side .rest-side .categories i{
     border-radius: 8px;
     background-color: var(--LightSections);
     color: var(--maincolor);
     padding: 7px 10px;
+    transition: all 0.2s ease-in-out;
 }
 
 .archive-page .archive-side .rest-side .categories .each-cat {
-    padding: 16px;
-    background: var(--SiteBackgroundColor);
-    border-radius: 16px;
     display: flex;
     gap: 8px;
     flex-direction: column;
 }
 .archive-page .archive-side .rest-side .categories .each-cat .up-cat {
+    background: var(--SiteBackgroundColor);
+    border-radius: 16px;
+    padding: 16px;
+}
+.archive-page .archive-side .rest-side .categories .each-cat .up-cat>div{
     display: flex;
-    gap: 8px;
+    cursor: pointer;
     align-items: center;
+    gap: 8px;
+}
+.archive-page .archive-side .rest-side .categories .each-cat .up-cat>h4 {
+    margin-top: 8px;
+    color: #6D6E6D;
+    font-weight: 400;
+    font-size: 14px;
+    position: relative;
+    padding-right: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.archive-page .archive-side .rest-side .categories .each-cat>.active>h4{
+    color: var(--LightParagraphs);
+}
+.archive-page .archive-side .rest-side .categories .each-cat .up-cat>h4::after{
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 4px;
+    border-radius: 16px;
+    background-color: var(--maincolor);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    box-shadow: 0 0 10px 0px var(--maincolor);
+    transition: all 0.2s ease-in-out;
+}
+.archive-page .archive-side .rest-side .categories .each-cat>.active>h4::after{
+    background-color: var(--LightSections);
+    box-shadow: 0 0 10px 0px var(--LightSections);
+}
+.archive-page .archive-side .rest-side .categories .each-cat>.active{
+    background-color: var(--maincolor);
+    color: var(--LightParagraphs);
+}
+.archive-page .archive-side .rest-side .categories .each-cat>.active i{
+    background-color: var(--TenPercentWhite);
+    color: var(--LightParagraphs);
+    border: var(--MainBorder);
+}
+.archive-page .archive-side .rest-side .categories .each-cat>.active span {
+    transform: rotate(180deg);
 }
 .archive-page .archive-side .rest-side .categories .each-cat .up-cat span {
     direction: ltr;
     margin-inline-end: auto;
     font-size: 12px;
+    transition: all 0.3s ease;
 }
 .archive-page .archive-side .rest-side .categories .each-cat .taxonomies {
     display: flex;
@@ -3510,15 +3595,72 @@ footer.irancast-footer .container .irancast-copy-right p{
     background: var(--LightParagraphs);
     border-radius: 12px;
     gap: 8px;
+    margin-top: 12px;
+    align-items: center;
+}
+.archive-page .archive-side .rest-side .categories .each-cat .all-taxes{
+    border-radius: 16px;
+    background-color: var(--SiteBackgroundColor);
+    display: none;
+    padding: 16px;
 }
 .archive-page .archive-side .rest-side .categories .each-cat .taxonomies input{
     order: -1;
+}
+/* فقط همین سلکتورِ شما: ورودی‌های داخل .taxonomies */
+.archive-page .archive-side .rest-side .categories .each-cat .taxonomies span{
+    direction: ltr;
+    margin-inline-end: auto;
+    font-size: 12px;
+    color: #B6B7B6;
+}
+.archive-page .archive-side .rest-side .categories .each-cat .taxonomies input[type="checkbox"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 20px;
+    height: 20px;
+    min-width: 20px; /* جلوی Shrink در فلکس‌ها */
+    border-radius: 6px;
+    border: 2px solid #d1d5db;
+    background-color: var(--LightSections);
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .12s ease;
+    box-sizing: border-box;
+}
+
+/* هاور کمی برجسته */
+.archive-page .archive-side .rest-side .categories .each-cat .taxonomies input[type="checkbox"]:hover{
+    transform: translateY(-1px);
+    border-color: #bcbec2;
+}
+
+.archive-page .archive-side .rest-side .categories .each-cat .taxonomies input[type="checkbox"]:focus{
+    outline: none;
+}
+.archive-page .archive-side .rest-side .categories .each-cat .taxonomies label {
+    cursor: pointer;
+    flex-grow: 1;
+}
+.archive-page .archive-side .rest-side .categories .each-cat .taxonomies input[type="checkbox"]:checked{
+    background-color: var(--maincolor);
+    border-color: var(--maincolor);
+    box-shadow: 0 0 30px -3px var(--maincolor);
+
+    /* آیکون تیک به صورت data-uri SVG */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><polyline points='20 6 9 17 4 12' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% 60%;
 }
 /* paginasion: */
 .archive-page .archive-content .pagination {
     display: flex;
     gap: 16px;
-    margin: 16px auto 0 auto;
+    margin: 40px auto 0 auto;
     justify-content: center;
 }
 .archive-page .archive-content .pagination a {

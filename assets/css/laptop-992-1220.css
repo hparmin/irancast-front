@@ -217,19 +217,42 @@
     .archive-page .archive-content {
         width: 670px;
     }
+    .archive-page .archive-content .all-episodes-sec .each-card {
+        margin-bottom: 40px;
+        width: 324px;
+    }
+    .irancast-premium .container .premium-cards .each-card .sub-shape2, .archive-content .all-episodes-sec .each-card .sub-shape2 {
+        top: 95px;
+    }
+    .irancast-premium .container .premium-cards .each-card .content img, .archive-content .all-episodes-sec .each-card .content img {
+        width: 296px;
+        height: 184px;
+    }
+    .irancast-premium .container .premium-cards .each-card>a, .archive-content .all-episodes-sec .each-card>a {
+        bottom: -20px;
+    }
+    .irancast-premium .container .premium-cards .each-card .content .desc svg, .archive-content .all-episodes-sec .each-card .content .desc svg {
+        top: 40px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    /* .irancast-read-more .archive-page:  */
+    .irancast-read-more .container .read-more-cards .each-card, .archive-page .archive-content .all-posts-sec .each-card {
+        width: 324px;
+        margin-bottom: 40px;
+    }
+    .irancast-read-more .container .read-more-cards .each-card .sub-shape2, .archive-page .archive-content .all-posts-sec .each-card .sub-shape2 {
+        top: 95px;
+    }
+    .irancast-read-more .container .read-more-cards .each-card>a, .archive-page .archive-content .all-posts-sec .each-card>a {
+        bottom: -14px;
+    }
+    .irancast-read-more .container .read-more-cards .each-card .content img, .archive-page .archive-content .all-posts-sec .each-card .content img {
+        width: 296px;
+        height: 184px;
+    }
+    .irancast-read-more .container .read-more-cards .each-card .content .desc, .archive-page .archive-content .all-posts-sec .each-card .content .desc {
+        padding: 5px 21px 12px;
+    }
 
 
 

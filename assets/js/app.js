@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     listItems.forEach(li => {
         const hasUL = li.querySelector("ul");
-        const h2 = li.querySelector("h2");
+        const h2 = li.querySelector("ul.mobile>li>ul li h2");
 
         if (hasUL && h2) {
             // اگر هنوز span اضافه نشده بود، اضافه کن
@@ -372,6 +372,30 @@ $(document).ready(function () {
         $('.irancast-header .header-content-top .container>ul.mobile').toggleClass('menu-open');
     });
 });
+
+
+// کد های مخصوص باز و بسته شدن ساید بار صفحه آرشیو ایپزود ها:
+jQuery(document).ready(function($){
+    $('.archive-page .archive-side .rest-side .categories .each-cat .up-cat').on('click', function(){
+        $(this).toggleClass('active'); // هم رنگ تغییر می‌کنه هم اسپن می‌چرخه
+        $(this).next('.all-taxes').slideToggle(300);
+    });
+});
+
+
+// کد های مربوط به ساید بار صفحه آرشیو
+const aside = document.querySelector('.archive-page .archive-side');
+const handle = document.querySelector('.archive-page .archive-side > .handle');
+
+handle.addEventListener('click', () => {
+    aside.classList.toggle('open');
+});
+
+
+
+
+
+
 
 
 

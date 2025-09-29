@@ -450,12 +450,28 @@
         -webkit-line-clamp: 20;
     }
 
+    /* archive-page: */
+    .archive-page .archive-content .archive-sort-sec {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .archive-page .archive-content .all-episodes-sec {
+        justify-content: center;
+    }
+    .archive-sort-sec > div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .archive-page .archive-content .pagination {
+        gap: 7px;
+    }
 
-
-
-
-
-
+    /* .irancast-read-more .archive-page:  */
+    .archive-page .archive-content .all-posts-sec {
+        justify-content: center;
+    }
 
 
 

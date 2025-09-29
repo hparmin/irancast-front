@@ -373,6 +373,26 @@
         direction: ltr;
     }
 
+    /* .archive-page .single-content (single blog): */
+    .archive-page .single-content {
+        width: 100%;
+    }
+    .archive-page .single-content .single-blog-main-image .details {
+        position: unset;
+        top: 82%;
+        width: 95%;
+        background: var(--maincolor);
+        border-radius: 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .archive-page .single-content .body {
+        padding: 0px 24px 0 24px;
+    }
+    .archive-page .single-content .single-blog-main-image .details-shape {
+        display: none;
+    }
+
 
 
 

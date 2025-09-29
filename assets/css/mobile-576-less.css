@@ -625,11 +625,14 @@
         -webkit-line-clamp: 7;
     }
 
-    /* archive-page: */
-
-
-
-
+    /* .archive-page .single-content (single blog): */
+    .archive-page .single-content h1 {
+        padding: 8px 40px;
+        font-size: 10px;
+    }
+    .archive-page .single-content .single-sections .header {
+        flex-direction: column;
+    }
 
 
 

@@ -630,22 +630,73 @@
         flex-direction: column;
     }
 
+    /* iarncast-dashboard page: */
+    .iarncast-dashboard .container .dashboard-content>.content {
+        margin-top: -20px;
+    }
+    .iarncast-dashboard .container .dashboard-content>.title .title-content {
+        top: 21px;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .fav-content {
+        padding: 0px 0px 24px 0px;
+        background-color: var(--LightSections);
+    }
+    .iarncast-dashboard .container .dashboard-content .content .fav-content .each-fav .fav-body{
+        background-color: var(--SiteBackgroundColor);
+        padding: 16px;
+        justify-content: center;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .dash-con .dash-con-header {
+        position: unset;
+        align-items: flex-start;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--SiteBackgroundColor);
+        margin-top: -2px;
+        margin-bottom: 10px;
+        border-radius: 0 0 16px 16px;
+        padding: 0px 15px 0 0;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .news-content .each-news:first-child {
+        margin-top: 30px;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .news-content .each-news{
+        background: var(--SiteBackgroundColor);
+    }
+    .iarncast-dashboard .container .dashboard-content .content .news-content .each-news>a {
+        top: 50px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .iarncast-dashboard .container .dashboard-content .content .news-content {
+        padding: 0px;
+        background-color: var(--LightSections);
+    }
+    .iarncast-dashboard .container .dashboard-content .content .news-content .each-news .title {
+        width: 290px;
+    }
+    .iarncast-dashboard .container .dashboard-content>.title .title-content h2{
+        font-size: 20px;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .my-subscribe>.title {
+        top: -40px;
+        right: -20px;
+        width: 300px;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .my-subscribe>.title .title-content>div {
+        padding: 9px 20px 9px 9px;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .my-subscribe>.active-light {
+        top: 80px;
+    }
+    .dashboard-content .content .my-subscribe .my-subscribe-content {
+        padding: 130px 16px 24px 16px;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .my-subscribe>a.renewal {
+        width: 100%;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .my-subscribe>.title .title-content>div p span {
+        display: inline-block;
+    }
 
 
 

@@ -446,7 +446,10 @@
         width: 95%;
     }
 
-
+    /* fav-content page: */
+    .iarncast-dashboard .container .dashboard-content .content .fav-content .each-fav .fav-body {
+        background: var(--SiteBackgroundColor);
+    }
 
 
 

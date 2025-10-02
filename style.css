@@ -4625,7 +4625,7 @@ footer.irancast-footer .container .irancast-copy-right p{
 .iarncast-dashboard .container .dashboard-sidebar>.handle {
     position: absolute;
     left: -57px;
-    top: 20%;
+    top: 30%;
     transform: translateY(-50%);
     background-color: var(--maincolor);
     border-radius: 14px 0 0 14px;
@@ -4787,6 +4787,7 @@ footer.irancast-footer .container .irancast-copy-right p{
     gap: 8px;
     z-index: 5;
     color: var(--LightParagraphs);
+    align-items: center;
 }
 .iarncast-dashboard .container .dashboard-content .content .news-content .each-news .title i{
     padding: 13px 16px;
@@ -5033,6 +5034,10 @@ footer.irancast-footer .container .irancast-copy-right p{
 }
 .dashboard-content .content .my-downloads .my-orders:nth-child(odd)>a{
     color: var(--maincolor);
+}
+.dashboard-content .content .my-downloads .row>div a.mobile{
+    padding: 8px 12px;
+    display: none;
 }
 
 /* each-order page: */

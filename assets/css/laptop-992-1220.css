@@ -298,11 +298,25 @@
         padding-bottom: 57px;
     }
 
+    /* my-subscribe page: */
+    .iarncast-dashboard .container .dashboard-content .content .my-subscribe>a.renewal {
+        position: unset;
+        display: inline-block;
+    }
 
+    /* my-subscribe page: */
+    .dashboard-content .content .my-subscribe .my-subscribe-content>div {
+        padding: 3px 16px;
+        top: 100px;
+    }
 
-
-
-
+    /* my-downloads page: */
+    .dashboard-content .content .my-downloads .row>div a.desktop{
+        display: none;
+    }
+    .dashboard-content .content .my-downloads .row>div a.mobile{
+        display: unset;
+    }
 
 
 

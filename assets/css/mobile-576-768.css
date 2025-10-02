@@ -481,10 +481,44 @@
     .iarncast-dashboard .container .dashboard-content .content .news-content>a{
         display: unset;
     }
+    .iarncast-dashboard .container .dashboard-content .content .dash-con .dash-con-header {
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .news-content .each-news:first-child {
+        margin-top: 110px;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .news-content {
+        margin-top: -2px;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .news-content .each-news>a {
+        position: unset;
+        display: inline-block;
+        margin-top: 10px;
+    }
 
-
-
-
+    /* my-subscribe page: */
+    .iarncast-dashboard .container .dashboard-content .content .my-subscribe .desktop{
+        display: none;
+    }
+    .dashboard-content .content .my-subscribe .my-subscribe-content>div {
+        padding: 6px 16px;
+    }
+    .dashboard-content .content .my-subscribe .my-subscribe-content {
+        position: unset;
+        padding: 145px 24px 24px 24px;
+        background: var(--SiteBackgroundColor);
+        border-radius: 24px;
+        margin-bottom: 20px;
+    }
+    .dashboard-content .content .my-subscribe .my-subscribe-content>div {
+        width: 100%;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .my-subscribe>.active-light {
+        top: 100px;
+        left: 42px;
+    }
 
 
 

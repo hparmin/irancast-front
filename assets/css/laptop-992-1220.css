@@ -270,12 +270,33 @@
         font-size: 21px;
     }
 
-
-
-
-
-
-
+    /* iarncast-dashboard page: */
+    .iarncast-dashboard .container .dashboard-content {
+        width: 700px;
+    }
+    .iarncast-dashboard .container .dashboard-sidebar {
+        width: 220px;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .dash-con>a {
+        width: 124px;
+        padding: 7px 0px;
+        font-size: 14px;
+    }
+    .iarncast-dashboard .container .dashboard-sidebar .title .title-content {
+        padding: 10px 5px;
+    }
+    .iarncast-dashboard .container .dashboard-sidebar .content ul li {
+        gap: 20px;
+    }
+    .iarncast-dashboard .container .dashboard-sidebar .bottom-content {
+        margin-top: -50px;
+    }
+    .iarncast-dashboard .container .dashboard-sidebar .bottom {
+        margin-top: -40px;
+    }
+    .iarncast-dashboard .container .dashboard-sidebar .content {
+        padding-bottom: 57px;
+    }
 
 
 

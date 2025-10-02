@@ -356,7 +356,6 @@
     .archive-page .archive-side.open {
         transform: translateX(0);
     }
-
     .archive-page .archive-side>.handle{
         display: unset;
     }
@@ -392,6 +391,66 @@
     .archive-page .single-content .single-blog-main-image .details-shape {
         display: none;
     }
+
+    /* iarncast-dashboard page: */
+    .iarncast-dashboard .container .dashboard-sidebar{
+        position: fixed;
+        right: 0;
+        transform: translateX(110%);
+        transition: all 0.3s ease;
+        z-index: 40;
+        top: 92px;
+    }
+    .iarncast-dashboard .container .dashboard-sidebar.open {
+        transform: translateX(0);
+    }
+    .iarncast-dashboard .container .dashboard-sidebar>.handle{
+        display: unset;
+    }
+    .iarncast-dashboard .container .dashboard-sidebar.open {
+        transform: translateX(0);
+    }
+    .iarncast-dashboard .container .dashboard-sidebar.open {
+        transform: translateX(0);
+    }
+    .iarncast-dashboard .container {
+        justify-content: center;
+    }
+    .iarncast-dashboard .container .dashboard-sidebar .content ul li {
+        max-height: 470px;
+        overflow: auto;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .fav-content .each-fav .fav-body {
+        position: unset;
+        background-color: var(--LightSections);
+        flex-wrap: wrap;
+        border-radius: 16px;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .fav-content .each-fav .each-fav-svg{
+        display: none;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .fav-content .each-fav .fav-body .player {
+        width: 97%;
+        margin-right: unset;
+    }
+    .iarncast-dashboard .container .dashboard-content>.content {
+        margin-top: -44px;
+    }
+    .iarncast-dashboard .container .dashboard-content>.title .title-content {
+        top: 0;
+        bottom: 43px;
+        right: 0px;
+        padding-right: 27px;
+    }
+    .iarncast-dashboard .container .dashboard-content {
+        width: 95%;
+    }
+
+
+
+
+
+
 
 
 

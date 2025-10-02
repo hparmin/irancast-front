@@ -575,7 +575,6 @@
     .irancast-faq .container .content {
         margin-top: 30px;
     }
-
     /* irancast-footer section: */
     footer.irancast-footer .container .footer-top .content figure {
         width: 50%;
@@ -612,15 +611,12 @@
     footer.irancast-footer .container .footer-middle .about-us-footer {
         align-items: flex-start;
     }
-
     footer.irancast-footer .container .foote-bottom .newsletter input[type="text"] {
         width: 248px;
     }
-
     .irancast-about-us .container img.about-us-img {
         max-height: 397px;
     }
-
     .irancast-about-us .container .content .right-section .desc {
         -webkit-line-clamp: 7;
     }

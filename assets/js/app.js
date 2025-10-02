@@ -372,9 +372,7 @@ $(document).ready(function () {
         $('.irancast-header .header-content-top .container>ul.mobile').toggleClass('menu-open');
     });
 });
-
-
-// کد های مخصوص باز و بسته شدن ساید بار صفحه آرشیو ایپزود ها:
+// کد های زیر باعث باز و بسته شدن زیر منو های منوی همبرگری میشن:
 jQuery(document).ready(function($){
     $('.archive-page .archive-side .rest-side .categories .each-cat .up-cat').on('click', function(){
         $(this).toggleClass('active'); // هم رنگ تغییر می‌کنه هم اسپن می‌چرخه
@@ -382,20 +380,18 @@ jQuery(document).ready(function($){
     });
 });
 
+// کد های مخصوص باز و بسته شدن ساید بار صفحه آرشیو ایپزود ها:
+document.addEventListener('DOMContentLoaded', () => {
+    const aside = document.querySelector('.archive-page .archive-side');
+    const handle = document.querySelector('.archive-page .archive-side .handle');
+    if (aside && handle) {
+        handle.addEventListener('click', () => aside.classList.toggle('open'));
+    }
 
-// کد های مربوط به ساید بار صفحه آرشیو
-const aside = document.querySelector('.archive-page .archive-side');
-const handle = document.querySelector('.archive-page .archive-side > .handle');
-
-handle.addEventListener('click', () => {
-    aside.classList.toggle('open');
+    const dashaside = document.querySelector('.iarncast-dashboard .container .dashboard-sidebar');
+    const dashhandle = document.querySelector('.iarncast-dashboard .container .dashboard-sidebar .handle');
+    if (dashaside && dashhandle) {
+        dashhandle.addEventListener('click', () => dashaside.classList.toggle('open'));
+    }
 });
-
-
-
-
-
-
-
-
 

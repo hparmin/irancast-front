@@ -473,8 +473,14 @@
         justify-content: center;
     }
 
-
-
+    /* iarncast-dashboard page: */
+    .iarncast-dashboard .container .dashboard-content .content .dash-con>a.desktop{
+        display: none;
+    }
+    .iarncast-dashboard .container .dashboard-content .content .fav-content>a,
+    .iarncast-dashboard .container .dashboard-content .content .news-content>a{
+        display: unset;
+    }
 
 
 

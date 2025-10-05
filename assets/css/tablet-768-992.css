@@ -451,8 +451,26 @@
         background: var(--SiteBackgroundColor);
     }
 
+    /* setting page: */
+    .dashboard-content .content .setting .desc {
+        gap: 34px;
+    }
 
+    /* irancast-basket page: */
+    .irancast-basket .container .basket-side {
+        position: unset;
+    }
+    .irancast-basket .container {
+        flex-direction: column;
+    }
+    .irancast-basket .container .content {
+        width: 100%;
+    }
 
+    /* success-pay page: */
+    .success-pay .container .content .details .det {
+        width: 48%;
+    }
 
 
 

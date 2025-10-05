@@ -520,19 +520,83 @@
         left: 42px;
     }
 
+    /* my-downloads page: */
+    .iarncast-dashboard .container .dashboard-content>.my-downloads-content {
+        padding: 24px 8px;
+    }
+    .dashboard-content .content .my-downloads .header .content {
+        padding: 0px 16px;
+    }
+    .dashboard-content .content .my-downloads .row {
+        max-height: unset;
+    }
+    .dashboard-content .content .my-downloads .row>div figure{
+        display: none;
+    }
 
+    /* my-orders page: */
+    .dashboard-content .content .my-downloads .my-orders>*{
+        flex-shrink: 0;
+    }
+    .dashboard-content .content .my-downloads .my-orders{
+        overflow: auto;
+    }
+    .dashboard-content .content .my-downloads .header .content {
+        overflow-x: auto;
+    }
+    .dashboard-content .content .my-downloads {
+        gap: 8px;
+    }
+    /* all dashboard pages: */
+    .iarncast-dashboard .container .dashboard-content>.content {
+        padding: 18px;
+    }
+    /* each-order page: */
+    .dashboard-content .content .each-order .details>div>div {
+        width: 100%;
+    }
+    .dashboard-content .content .each-order .desc {
+        padding: 16px 14px;
+        gap: 12px;
+    }
+    .dashboard-content .content .each-order {
+         padding: 0px;
+         background-color: unset;
+    }
 
+    /* my-comments page: */
+    .dashboard-content .content .my-comments .each-comment .content {
+        padding: 14px 14px 0 14px;
+    }
+    .dashboard-content .content .my-comments .each-comment .content .comments {
+        gap: 8px;
+    }
 
+    /* the-news page: */
+    .dashboard-content .content .the-news .row>a {
+        position: unset;
+    }
 
+    /* setting page: */
+    .dashboard-content .content .setting .desc {
+        gap: 7px;
+    }
 
+    /* irancast-basket page: */
+    .irancast-basket .container .content .basket-items .row {
+        flex-direction: column;
+    }
+    .irancast-basket .container {
+        padding-right: 0px;
+    }
+    .irancast-basket .container .content {
+        min-height: 500px;
+    }
 
-
-
-
-
-
-
-
+    .success-pay .container .content {
+        background-color: unset;
+        padding: 0px;
+    }
 
 
 

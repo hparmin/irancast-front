@@ -4287,6 +4287,9 @@ footer.irancast-footer .container .irancast-copy-right p{
     justify-content: center;
     align-items: center;
 }
+.four-o-four-page .pics>img {
+    width: 45%;
+}
 .four-o-four-page .pics>img.left-four-img{
     margin-right: -100px;
 }
@@ -4974,18 +4977,18 @@ footer.irancast-footer .container .irancast-copy-right p{
     padding-right: 24px;
 }
 .dashboard-content .content .my-downloads .row::before{
-    content: "";
-    border-radius: 16px;
-    position: absolute;
-    inset: 0;
+    /*content: "";*/
+    /*border-radius: 16px;*/
+    /*position: absolute;*/
+    /*inset: 0;*/
 }
 .dashboard-content .content .my-downloads .row:nth-child(even)::before{
-    background-color: var(--SecondMaincolor);
-    opacity: 0.07;
+    /*background-color: var(--SecondMaincolor);*/
+    /*opacity: 0.07;*/
 }
 .dashboard-content .content .my-downloads .row:nth-child(odd)::before{
-    background-color: var(--maincolor);
-    opacity: 0.1;
+    /*background-color: var(--maincolor);*/
+    /*opacity: 0.1;*/
 }
 .dashboard-content .content .my-downloads .row>div figure {
     float: right;
@@ -5401,7 +5404,7 @@ footer.irancast-footer .container .irancast-copy-right p{
     width: 872px;
     background-color: var(--LightSections);
     border-radius: 20px;
-    padding: 24px;
+    padding: 24px 24px 100px 24px;
     min-height: 575px;
     position: relative;
 }
@@ -5427,6 +5430,12 @@ footer.irancast-footer .container .irancast-copy-right p{
     display: flex;
     padding: 32px 24px;
     justify-content: space-between;
+    gap: 24px;
+}
+.irancast-basket .container .content .basket-items .row .left {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 .irancast-basket .container .content .basket-items .row .right {
     display: flex;
@@ -5456,7 +5465,7 @@ footer.irancast-footer .container .irancast-copy-right p{
     font-weight: 700;
 }
 .irancast-basket .container .content>svg{
-    width: 835px;
+    width: 96%;
     position: absolute;
     top: -88px;
     right: -24px;
@@ -5630,6 +5639,7 @@ footer.irancast-footer .container .irancast-copy-right p{
     background-color: var(--LightShapes);
     padding: 6px 16px;
     width: 49%;
+    border: 1px solid #0000001a;
 }
 .success-pay .container .content .details .det:last-child{
     width: 100%;

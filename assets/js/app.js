@@ -395,3 +395,115 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // کانتینر مورد نظر (fallback به document در صورت نبودن)
+    const container = document.querySelector('.dashboard-content .content .my-downloads') || document;
+
+    // انتخاب دقیق ردیف‌های سفارش (مطابق ساختاری که فرستادی)
+    const rows = Array.from(container.querySelectorAll('.row'));
+    if (!rows.length) return; // اگر ردیفی نبود کاری نمیکنیم
+
+    // تلاش برای گرفتن مقدار یک CSS variable از چند جای ممکن
+    function getCssVar(varName) {
+        varName = varName.startsWith('--') ? varName : `--${varName}`;
+        // اول کانتینر رو چک کن چون ممکنه متغیر در همون scope تعریف شده باشه
+        let v = getComputedStyle(container).getPropertyValue(varName).trim();
+        if (v) return v;
+        // بعد ریشه
+        v = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+        if (v) return v;
+        // بعد body به عنوان fallback
+        return getComputedStyle(document.body).getPropertyValue(varName).trim();
+    }
+
+    // هر رشته رنگی که CSS قبول میکنه رو بگیره و به rgba(r,g,b,alpha) تبدیل کنه
+    function colorStringToRgbaWithAlpha(colorStr, alpha) {
+        if (!colorStr) return '';
+        colorStr = colorStr.trim();
+
+        // استفاده از عنصر موقت تا مرورگر خودش رنگ رو normalize کنه
+        const tmp = document.createElement('div');
+        tmp.style.color = colorStr;
+        tmp.style.display = 'none';
+        document.body.appendChild(tmp);
+        const computed = getComputedStyle(tmp).color; // مثال: "rgb(255, 0, 0)" یا "rgba(255, 0, 0, 0.5)"
+        document.body.removeChild(tmp);
+
+        const m = computed.match(/rgba?\(\s*([0-9]+)\s*,\s*([0-9]+)\s*,\s*([0-9]+)(?:\s*,\s*([0-9.]+))?\s*\)/);
+        if (m) {
+            const r = parseInt(m[1], 10);
+            const g = parseInt(m[2], 10);
+            const b = parseInt(m[3], 10);
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+
+        // اگر همه چیز شکست خورد و colorStr قالب hex داشت، هندل کن (خیلی بعید ولی امنه)
+        const hexMatch = colorStr.replace(/\s+/g, '').match(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i);
+        if (hexMatch) {
+            let hex = hexMatch[1];
+            if (hex.length === 3) hex = hex.split('').map(h => h + h).join('');
+            const r = parseInt(hex.slice(0, 2), 16);
+            const g = parseInt(hex.slice(2, 4), 16);
+            const b = parseInt(hex.slice(4, 6), 16);
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+
+        return '';
+    }
+
+    // گرفتن متغیرها (با fallback رنگ نمونه اگر متغیر موجود نبود)
+    const mainVar = getCssVar('--maincolor') || '#DA2F37';
+    const secondVar = getCssVar('--secondmaincolor') || '#000';
+
+    const mainRgba = colorStringToRgbaWithAlpha(mainVar, 0.1) || colorStringToRgbaWithAlpha('#DA2F37', 0.1);
+    const secondRgba = colorStringToRgbaWithAlpha(secondVar, 0.1) || colorStringToRgbaWithAlpha('#000', 0.1);
+
+    // اعمال رنگ‌ها: ایندکس 0 (اول) -> odd در CSS (nth-child(odd))، پس idx%2===0 => main
+    rows.forEach((row, idx) => {
+        const bg = (idx % 2 === 0) ? mainRgba : secondRgba;
+        if (bg) row.style.backgroundColor = bg;
+    });
+
+    // اگر می‌خوای بعداً دوباره اعمالش کنی (مثلاً بعد از تغییر متغیرها)، از این تابع استفاده کن:
+    // applyStripedBackgrounds();
+    function applyStripedBackgrounds() {
+        const updatedMain = colorStringToRgbaWithAlpha(getCssVar('--maincolor') || mainVar, 0.1);
+        const updatedSecond = colorStringToRgbaWithAlpha(getCssVar('--secondmaincolor') || secondVar, 0.1);
+        rows.forEach((row, idx) => {
+            row.style.backgroundColor = (idx % 2 === 0) ? (updatedMain || mainRgba) : (updatedSecond || secondRgba);
+        });
+    }
+
+    // (اختیاری) اگر پنل ادمین باعث میشه متغیرها runtime تغییر کنن و بخوای خودکار آپدیت بشه،
+    // می‌تونی یک MutationObserver یا event listener اضافه کنی که applyStripedBackgrounds رو صدا بزنه.
+});
+
+
+
+
+
+
+
+

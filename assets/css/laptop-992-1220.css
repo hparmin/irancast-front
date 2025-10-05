@@ -318,7 +318,15 @@
         display: unset;
     }
 
-
+    .dashboard-content .content .my-downloads .row {
+        padding-right: 18px;
+    }
+    .dashboard-content .content .my-downloads .my-orders>* {
+        min-width: 13%;
+    }
+    .dashboard-content .content .my-downloads .my-orders>a {
+        font-size: 13px;
+    }
 
 
 

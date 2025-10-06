@@ -416,8 +416,8 @@
     .iarncast-dashboard .container {
         justify-content: center;
     }
-    .iarncast-dashboard .container .dashboard-sidebar .content ul li {
-        max-height: 470px;
+    .iarncast-dashboard .container .dashboard-sidebar .content ul {
+        max-height: 40vh;
         overflow: auto;
     }
     .iarncast-dashboard .container .dashboard-content .content .fav-content .each-fav .fav-body {

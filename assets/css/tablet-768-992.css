@@ -472,6 +472,51 @@
         width: 48%;
     }
 
+    /* single-episode page: */
+    .single-episode-content .single-episode-sidebar {
+        position: fixed;
+        right: 0;
+        transform: translateX(101%);
+        transition: all 0.3s ease;
+        z-index: 40;
+        top: 160px;
+    }
+    .single-episode-content .single-episode-sidebar.open {
+        transform: translateX(0);
+    }
+    .single-episode-content .single-episode-sidebar>.handle {
+        display: unset;
+    }
+    .single-episode-content .single-episode-body {
+        width: 100%;
+    }
+    .single-episode-content .single-episode-body .about {
+        padding-left: 8px;
+    }
+
+    /* single-episode page: */
+    .single-episode-banner .container>svg{
+        display: none;
+    }
+    .single-episode-banner .container .content {
+        position: unset;
+    }
+    .single-episode-banner .container {
+        padding-right: 12px;
+        background-color: var(--LightShapes);
+        border-radius: 16px;
+    }
+    .single-episode-banner .container .content .left-section .details {
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+    .single-episode-banner .container .content {
+        gap: 16px;
+    }
+    .single-episode-content .single-episode-body .about .header {
+        width: 100%;
+    }
+
 
 
 

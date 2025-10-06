@@ -804,6 +804,30 @@
         font-size: 47px;
     }
 
+    /* single-episode page: */
+    .single-episode-content .single-episode-body .about .header {
+        padding: 16px 0 16px 16px;
+    }
+    .sigle-episode-links .container .content {
+        gap: 16px;
+        position: unset;
+        background: var(--SecondMaincolor);
+        border-radius: 16px;
+    }
+    .sigle-episode-links .container .content .each-link {
+        flex-direction: column;
+        padding: 8px;
+    }
+    .sigle-episode-links .container svg.desktop{
+        display: none;
+    }
+    .sigle-episode-links {
+        margin-top: 36px;
+    }
+    .single-episode-content {
+        margin-top: 50px;
+    }
+
 
 
 

@@ -328,8 +328,10 @@
         font-size: 13px;
     }
 
-
-
+    /* single-episode page: */
+    .single-episode-content .single-episode-body {
+        width: 671px;
+    }
 
 
 

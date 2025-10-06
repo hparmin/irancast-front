@@ -380,18 +380,30 @@ jQuery(document).ready(function($){
     });
 });
 
-// کد های مخصوص باز و بسته شدن ساید بار صفحه آرشیو ایپزود ها:
+
+
+
+// کدهای مخصوص باز و بسته شدن سایدبار صفحات مختلف
 document.addEventListener('DOMContentLoaded', () => {
-    const aside = document.querySelector('.archive-page .archive-side');
-    const handle = document.querySelector('.archive-page .archive-side .handle');
-    if (aside && handle) {
-        handle.addEventListener('click', () => aside.classList.toggle('open'));
+    // --- سایدبار صفحه آرشیو اپیزودها ---
+    const archiveAside = document.querySelector('.archive-page .archive-side');
+    const archiveHandle = document.querySelector('.archive-page .archive-side .handle');
+    if (archiveAside && archiveHandle) {
+        archiveHandle.addEventListener('click', () => archiveAside.classList.toggle('open'));
     }
 
-    const dashaside = document.querySelector('.iarncast-dashboard .container .dashboard-sidebar');
-    const dashhandle = document.querySelector('.iarncast-dashboard .container .dashboard-sidebar .handle');
-    if (dashaside && dashhandle) {
-        dashhandle.addEventListener('click', () => dashaside.classList.toggle('open'));
+    // --- سایدبار داشبورد ---
+    const dashAside = document.querySelector('.iarncast-dashboard .container .dashboard-sidebar');
+    const dashHandle = document.querySelector('.iarncast-dashboard .container .dashboard-sidebar .handle');
+    if (dashAside && dashHandle) {
+        dashHandle.addEventListener('click', () => dashAside.classList.toggle('open'));
+    }
+
+    // --- سایدبار صفحه سینگل اپیزود ---
+    const singleAside = document.querySelector('.single-episode-sidebar');
+    const singleHandle = document.querySelector('.single-episode-sidebar .handle');
+    if (singleAside && singleHandle) {
+        singleHandle.addEventListener('click', () => singleAside.classList.toggle('open'));
     }
 });
 
@@ -400,23 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//  دستورات زیر باعث میشن تا هر کدام از ردیف های صفحه orders به ده درصد رنگ اصلی و ده درصد رنگ اصلی دوم در بیام
 document.addEventListener('DOMContentLoaded', () => {
     // کانتینر مورد نظر (fallback به document در صورت نبودن)
     const container = document.querySelector('.dashboard-content .content .my-downloads') || document;
